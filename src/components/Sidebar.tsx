@@ -67,7 +67,7 @@ export const Sidebar = () => {
     },[navigations]);
 
     return (
-        <div className="container-fluid page-body-wrapper">
+        <>
             <Fab />
             <nav className="sidebar sidebar-offcanvas" id="sidebar">
                 <ul className="nav">
@@ -191,6 +191,6 @@ export const Sidebar = () => {
                     </li>
                 </ul>
             </nav>
-        </div>       
+        </>       
     )
 }

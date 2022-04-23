@@ -14,8 +14,8 @@ function App() {
         <Sidebar />
         <div className="main-panel">
           {/* <ViewTemplateReport /> */}
-          {/* <GenerateReport /> */}
-          <AssignReport />
+          <GenerateReport />
+          {/* <AssignReport /> */}
           <Footer />
         </div>
       </div>

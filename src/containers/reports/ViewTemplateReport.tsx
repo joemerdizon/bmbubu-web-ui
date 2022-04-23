@@ -10,7 +10,7 @@ export const ViewTemplateReport = () => {
           <div className="card">
             <div className="card-body">
               <p className="card-title">
-                <i className="fa fa-edit" />
+                <i className="fa fa-edit mr-2" />
                 View Template Reports
                 <button type="button" className="btn btn-primary btn-sm btn-icon-text float-right">
                   <i className="fa-solid fa-circle-plus mr-1" />

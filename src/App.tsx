@@ -4,6 +4,7 @@ import { Sidebar } from "./components/Sidebar"
 import { Footer } from "./components/Footer"
 import { ViewTemplateReport } from './containers/reports/ViewTemplateReport';
 import { GenerateReport } from './containers/reports/GenerateReport';
+import { AssignReport } from './containers/reports/AssignReport';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Sidebar />
         <div className="main-panel">
           {/* <ViewTemplateReport /> */}
-            <GenerateReport />
+          {/* <GenerateReport /> */}
+          <AssignReport />
           <Footer />
         </div>
       </div>

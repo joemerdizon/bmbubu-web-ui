@@ -22,737 +22,729 @@ return (
           <div className="col-md-12 grid-margin stretch-card">
             <div className="card">
               <div className="card-body">
+                <button type="button" className="btn btn-primary btn-sm btn-icon-text float-right" data-toggle="modal" data-target="#modal-fullscreen-xl-generate-report">
+                  <i className="fa-solid fa-circle-plus mr-1" />
+                  Generate Report
+                </button>
                 <p className="card-title">
-                  <i className="fa fa-edit" />
-                  View Template Reports
-                  <button type="button" className="btn btn-primary btn-sm btn-icon-text float-right">
-                    <i className="fa-solid fa-circle-plus mr-1" />
-                    Create Report
-                  </button>
+                  <i className="fa fa-desktop mr-2" />
+                  Generate Reports
                 </p>
                 <div className="my-3">
                   <hr />
                 </div>
-                <ul className="nav nav-tabs" id="setting-panel" role="tablist">
-                  <li className="nav-item">
-                    <a className="nav-link active" id="all-reports-tab" data-toggle="tab" href="#all-reports-section" role="tab" aria-controls="all-reports-section" aria-expanded="true">
-                      <i className="fa-solid fa-envelopes-bulk" /> All Reports
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" id="saved-tab" data-toggle="tab" href="#saved-section" role="tab" aria-controls="saved-section">
-                      <i className="fa-solid fa-floppy-disk" /> Saved
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" id="published-tab" data-toggle="tab" href="#published-section" role="tab" aria-controls="published-section">
-                      <i className="fa-solid fa-file-arrow-up" /> Published
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" id="sent-for-approval-tab" data-toggle="tab" href="#sent-for-approval-section" role="tab" aria-controls="sent-for-approval-section">
-                      <i className="fa-solid fa-file-import" /> Sent for Approval
-                    </a>
-                  </li>
-                </ul>
-                <div className="tab-content" id="setting-content">
-                  <div className="tab-pane fade show active scroll-wrapper" id="all-reports-section" role="tabpanel" aria-labelledby="all-reports-section">
-                    <div className="wrapper wrapper-content animated fadeInRight">
-                      <div className="ibox-content forum-container">
-                        <div className="row border rounded pb-3 pt-4 mb-5">
-                          <div className="col-md-8 col-sm-8">
-                            <div className="switchToggle mr-2">
-                              <small className="font-weight-bold mr-2">Sort by:</small>
-                              <input type="checkbox" id="switch" />
-                              <label htmlFor="switch">Toggle</label>
-                            </div>
-                            <div className="btn-group mt-2" role="group" aria-label="Basic example">
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
-                                <i className="fa-solid fa-envelope-open-text mr-1" /> Title
-                              </button>
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                                <i className="far fa-calendar-plus mr-1" /> Created at
-                              </button>
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                                <i className="far fa-calendar-check mr-1"> </i> Updated at
-                              </button>
-                            </div>
-                          </div>
-                          <div className="col-md-4 col-sm-4">
-                            <div className="input-group">
-                              <input type="text" className="form-control" placeholder="Search for..." aria-label="Search for..." />
-                              <div className="input-group-append">
-                                <button className="btn btn-sm btn-primary" type="button">
-                                  <i className="icon-search" />
-                                  Search
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="forum-item">
-                          <div className="row">
-                            <div className="col-12">
-                              <div className="forum-icon">
-                                <img src="images/assigned-templates/report1.png" className="forum-avatar" />
-                              </div>
-                              <span className="mx-2 float-right">
-                                <a href="#" className="text-primary text-decoration-none">
-                                  <i className="ti-pin2" />
-                                </a>
-                              </span>
-                              <a href="#" className="forum-item-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                              </a>
-                              <div className="forum-sub-title mt-1">
-                                <span className="badge badge-dark mr-2">Saved</span>
-                                <small className="text-secondary">
-                                  <span className="mr-3">
-                                    <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                                  </span>
-                                  <span className="mr-3">
-                                    <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                                  </span>
-                                  <span>
-                                    <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                                  </span>
-                                </small>
-                                <p className="m-0">
-                                  Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
-                                  sit amet. Purus in mollis nunc sed id semper risus in.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="col-md-12 col-12 forum-info text-left">
-                              <div className="mt-2" style={{ display: "inline-block" }}>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-edit" /> Edit
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-user-tag" /> Assign
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-vial" /> Simulate
-                                </button>
-                              </div>
-                              <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                                <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
-                                  <i className="fas fa-play" aria-hidden="true" />
-                                </button>
-                                <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                                  <i className="fas fa-comment-dots" aria-hidden="true" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="forum-item">
-                          <div className="row">
-                            <div className="col-12">
-                              <div className="forum-icon">
-                                <img src="images/assigned-templates/report2.png" className="forum-avatar" />
-                              </div>
-                              <span className="mx-2 float-right">
-                                <a href="#" className="text-primary text-decoration-none">
-                                  <i className="ti-pin2" />
-                                </a>
-                              </span>
-                              <a href="#" className="forum-item-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                              </a>
-                              <div className="forum-sub-title mt-1">
-                                <span className="badge badge-danger mr-2">Published</span>
-                                <small className="text-secondary">
-                                  <span className="mr-3">
-                                    <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                                  </span>
-                                  <span className="mr-3">
-                                    <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                                  </span>
-                                  <span>
-                                    <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                                  </span>
-                                </small>
-                                <p className="m-0">
-                                  Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
-                                  sit amet. Purus in mollis nunc sed id semper risus in.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="col-md-12 col-12 forum-info text-left">
-                              <div className="mt-2" style={{ display: "inline-block" }}>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-edit" /> Edit
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-user-tag" /> Assign
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-vial" /> Simulate
-                                </button>
-                              </div>
-                              <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                                <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
-                                  <i className="fas fa-play" aria-hidden="true" />
-                                </button>
-                                <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                                  <i className="fas fa-comment-dots" aria-hidden="true" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="forum-item">
-                          <div className="row">
-                            <div className="col-12">
-                              <div className="forum-icon">
-                                <img src="images/assigned-templates/report3.png" className="forum-avatar" />
-                              </div>
-                              <span className="mx-2 float-right">
-                                <a href="#" className="text-primary text-decoration-none">
-                                  <i className="ti-pin-alt text-secondary" />
-                                </a>
-                              </span>
-                              <a href="#" className="forum-item-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                              </a>
-                              <div className="forum-sub-title mt-1">
-                                <span className="badge badge-dark mr-2">Saved</span>
-                                <small className="text-secondary">
-                                  <span className="mr-3">
-                                    <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                                  </span>
-                                  <span className="mr-3">
-                                    <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                                  </span>
-                                  <span>
-                                    <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                                  </span>
-                                </small>
-                                <p className="m-0">
-                                  Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
-                                  sit amet. Purus in mollis nunc sed id semper risus in.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="col-md-12 col-12 forum-info text-left">
-                              <div className="mt-2" style={{ display: "inline-block" }}>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-edit" /> Edit
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-user-tag" /> Assign
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-vial" /> Simulate
-                                </button>
-                              </div>
-                              <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                                <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
-                                  <i className="fas fa-play" aria-hidden="true" />
-                                </button>
-                                <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                                  <i className="fas fa-comment-dots" aria-hidden="true" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="forum-item">
-                          <div className="row">
-                            <div className="col-12">
-                              <div className="forum-icon">
-                                <img src="images/assigned-templates/report4.png" className="forum-avatar" />
-                              </div>
-                              <span className="mx-2 float-right">
-                                <a href="#" className="text-primary text-decoration-none">
-                                  <i className="ti-pin-alt text-secondary" />
-                                </a>
-                              </span>
-                              <a href="#" className="forum-item-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                              </a>
-                              <div className="forum-sub-title mt-1">
-                                <span className="badge badge-warning mr-2">Sent for Approval</span>
-                                <small className="text-secondary">
-                                  <span className="mr-3">
-                                    <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                                  </span>
-                                  <span className="mr-3">
-                                    <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                                  </span>
-                                  <span>
-                                    <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                                  </span>
-                                </small>
-                                <p className="m-0">
-                                  Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
-                                  sit amet. Purus in mollis nunc sed id semper risus in.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="col-md-12 col-12 forum-info text-left">
-                              <div className="mt-2" style={{ display: "inline-block" }}>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-edit" /> Edit
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-user-tag" /> Assign
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-vial" /> Simulate
-                                </button>
-                              </div>
-                              <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                                <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
-                                  <i className="fas fa-play" aria-hidden="true" />
-                                </button>
-                                <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                                  <i className="fas fa-comment-dots" aria-hidden="true" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <nav aria-label="Page navigation example">
-                        <ul className="pagination justify-content-center">
-                          <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">«</span>
-                              <span className="sr-only">Previous</span>
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              1
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              2
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              3
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">»</span>
-                              <span className="sr-only">Next</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
+                <form>
+                  <div className="form-group mb-0 row">
+                    <label htmlFor="name_of_report" className="col-sm-3 col-form-label text-right required">
+                      Name of Report
+                    </label>
+                    <div className="col-sm-6">
+                      <select id="name_of_report" className="form-control" required>
+                        <option disabled selected />
+                        <option value="Sample Report Name 1">Sample Report Name 1</option>
+                        <option value="Sample Report Name 2">Sample Report Name 2</option>
+                        <option value="Sample Report Name 3">Sample Report Name 3</option>
+                        <option value="Sample Report Name 4">Sample Report Name 4</option>
+                      </select>
                     </div>
                   </div>
-                  <div className="tab-pane fade" id="saved-section" role="tabpanel" aria-labelledby="saved-section">
-                    <div className="wrapper wrapper-content animated fadeInRight">
-                      <div className="ibox-content forum-container">
-                        <div className="row border rounded pb-3 pt-4 mb-5">
-                          <div className="col-md-8 col-sm-8">
-                            <div className="switchToggle mr-2">
-                              <small className="font-weight-bold mr-2">Sort by:</small>
-                              <input type="checkbox" id="switch" />
-                              <label htmlFor="switch">Toggle</label>
-                            </div>
-                            <div className="btn-group mt-2" role="group" aria-label="Basic example">
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
-                                <i className="fa-solid fa-envelope-open-text mr-1" /> Title
-                              </button>
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                                <i className="far fa-calendar-plus mr-1" /> Created at
-                              </button>
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                                <i className="far fa-calendar-check mr-1"> </i> Updated at
-                              </button>
-                            </div>
-                          </div>
-                          <div className="col-md-4 col-sm-4">
-                            <div className="input-group">
-                              <input type="text" className="form-control" placeholder="Search for..." aria-label="Search for..." />
-                              <div className="input-group-append">
-                                <button className="btn btn-sm btn-primary" type="button">
-                                  <i className="icon-search" />
-                                  Search
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="forum-item">
-                          <div className="row">
-                            <div className="col-12">
-                              <div className="forum-icon">
-                                <img src="images/assigned-templates/report1.png" className="forum-avatar" />
-                              </div>
-                              <a href="#" className="forum-item-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                              </a>
-                              <div className="forum-sub-title mt-1">
-                                <small className="text-secondary">
-                                  <span className="mr-3">
-                                    <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                                  </span>
-                                  <span className="mr-3">
-                                    <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                                  </span>
-                                  <span>
-                                    <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                                  </span>
-                                </small>
-                                <p className="m-0">
-                                  Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
-                                  sit amet. Purus in mollis nunc sed id semper risus in.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="col-md-12 col-12 forum-info text-left">
-                              <div className="mt-2" style={{ display: "inline-block" }}>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-edit" /> Edit
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-user-tag" /> Assign
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-vial" /> Simulate
-                                </button>
-                              </div>
-                              <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                                <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
-                                  <i className="fas fa-play" aria-hidden="true" />
-                                </button>
-                                <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                                  <i className="fas fa-comment-dots" aria-hidden="true" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="forum-item">
-                          <div className="row">
-                            <div className="col-12">
-                              <div className="forum-icon">
-                                <img src="images/assigned-templates/report3.png" className="forum-avatar" />
-                              </div>
-                              <a href="#" className="forum-item-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                              </a>
-                              <div className="forum-sub-title mt-1">
-                                <small className="text-secondary">
-                                  <span className="mr-3">
-                                    <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                                  </span>
-                                  <span className="mr-3">
-                                    <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                                  </span>
-                                  <span>
-                                    <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                                  </span>
-                                </small>
-                                <p className="m-0">
-                                  Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
-                                  sit amet. Purus in mollis nunc sed id semper risus in.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="col-md-12 col-12 forum-info text-left">
-                              <div className="mt-2" style={{ display: "inline-block" }}>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-edit" /> Edit
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-user-tag" /> Assign
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-vial" /> Simulate
-                                </button>
-                              </div>
-                              <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                                <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
-                                  <i className="fas fa-play" aria-hidden="true" />
-                                </button>
-                                <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                                  <i className="fas fa-comment-dots" aria-hidden="true" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <nav aria-label="Page navigation example">
-                        <ul className="pagination justify-content-center">
-                          <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">«</span>
-                              <span className="sr-only">Previous</span>
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              1
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              2
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              3
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">»</span>
-                              <span className="sr-only">Next</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
+                  <div className="form-group mb-0 row">
+                    <label htmlFor="status" className="col-sm-3 col-form-label text-right required">
+                      Status
+                    </label>
+                    <div className="col-sm-6">
+                      <select id="status" className="form-control" required>
+                        <option disabled selected />
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                      </select>
                     </div>
                   </div>
-                  <div className="tab-pane fade" id="published-section" role="tabpanel" aria-labelledby="published-section">
-                    <div className="wrapper wrapper-content animated fadeInRight">
-                      <div className="ibox-content forum-container">
-                        <div className="row border rounded pb-3 pt-4 mb-5">
-                          <div className="col-md-8 col-sm-8">
-                            <div className="switchToggle mr-2">
-                              <small className="font-weight-bold mr-2">Sort by:</small>
-                              <input type="checkbox" id="switch" />
-                              <label htmlFor="switch">Toggle</label>
-                            </div>
-                            <div className="btn-group mt-2" role="group" aria-label="Basic example">
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
-                                <i className="fa-solid fa-envelope-open-text mr-1" /> Title
-                              </button>
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                                <i className="far fa-calendar-plus mr-1" /> Created at
-                              </button>
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                                <i className="far fa-calendar-check mr-1"> </i> Updated at
-                              </button>
-                            </div>
-                          </div>
-                          <div className="col-md-4 col-sm-4">
-                            <div className="input-group">
-                              <input type="text" className="form-control" placeholder="Search for..." aria-label="Search for..." />
-                              <div className="input-group-append">
-                                <button className="btn btn-sm btn-primary" type="button">
-                                  <i className="icon-search" />
-                                  Search
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="forum-item">
-                          <div className="row">
-                            <div className="col-12">
-                              <div className="forum-icon">
-                                <img src="images/assigned-templates/report2.png" className="forum-avatar" />
-                              </div>
-                              <a href="#" className="forum-item-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                              </a>
-                              <div className="forum-sub-title mt-1">
-                                <small className="text-secondary">
-                                  <span className="mr-3">
-                                    <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                                  </span>
-                                  <span className="mr-3">
-                                    <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                                  </span>
-                                  <span>
-                                    <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                                  </span>
-                                </small>
-                                <p className="m-0">
-                                  Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
-                                  sit amet. Purus in mollis nunc sed id semper risus in.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="col-md-12 col-12 forum-info text-left">
-                              <div className="mt-2" style={{ display: "inline-block" }}>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-edit" /> Edit
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-user-tag" /> Assign
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-vial" /> Simulate
-                                </button>
-                              </div>
-                              <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                                <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
-                                  <i className="fas fa-play" aria-hidden="true" />
-                                </button>
-                                <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                                  <i className="fas fa-comment-dots" aria-hidden="true" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <nav aria-label="Page navigation example">
-                        <ul className="pagination justify-content-center">
-                          <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">«</span>
-                              <span className="sr-only">Previous</span>
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              1
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              2
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              3
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">»</span>
-                              <span className="sr-only">Next</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
+                  <div className="form-group mb-4 row">
+                    <label htmlFor="date-range" className="col-sm-3 col-form-label text-right required">
+                      Date Range
+                    </label>
+                    <div className="col-sm-3">
+                      <input type="date" className="form-control" id="date-from" />
+                      <small id="passwordHelpBlock" className="form-text text-muted">
+                        Date from
+                      </small>
+                    </div>
+                    <div className="col-sm-3">
+                      <input type="date" className="form-control" id="date-to" />
+                      <small id="passwordHelpBlock" className="form-text text-muted">
+                        Date to
+                      </small>
                     </div>
                   </div>
-                  <div className="tab-pane fade" id="sent-for-approval-section" role="tabpanel" aria-labelledby="sent-for-approval-section">
-                    <div className="wrapper wrapper-content animated fadeInRight">
-                      <div className="ibox-content forum-container">
-                        <div className="row border rounded pb-3 pt-4 mb-5">
-                          <div className="col-md-8 col-sm-8">
-                            <div className="switchToggle mr-2">
-                              <small className="font-weight-bold mr-2">Sort by:</small>
-                              <input type="checkbox" id="switch" />
-                              <label htmlFor="switch">Toggle</label>
-                            </div>
-                            <div className="btn-group mt-2" role="group" aria-label="Basic example">
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
-                                <i className="fa-solid fa-envelope-open-text mr-1" /> Title
-                              </button>
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                                <i className="far fa-calendar-plus mr-1" /> Created at
-                              </button>
-                              <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                                <i className="far fa-calendar-check mr-1"> </i> Updated at
-                              </button>
-                            </div>
-                          </div>
-                          <div className="col-md-4 col-sm-4">
-                            <div className="input-group">
-                              <input type="text" className="form-control" placeholder="Search for..." aria-label="Search for..." />
-                              <div className="input-group-append">
-                                <button className="btn btn-sm btn-primary" type="button">
-                                  <i className="icon-search" />
-                                  Search
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="forum-item">
-                          <div className="row">
-                            <div className="col-12">
-                              <div className="forum-icon">
-                                <img src="images/assigned-templates/report4.png" className="forum-avatar" />
-                              </div>
-                              <a href="#" className="forum-item-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                              </a>
-                              <div className="forum-sub-title mt-1">
-                                <small className="text-secondary">
-                                  <span className="mr-3">
-                                    <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                                  </span>
-                                  <span className="mr-3">
-                                    <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                                  </span>
-                                  <span>
-                                    <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                                  </span>
-                                </small>
-                                <p className="m-0">
-                                  Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
-                                  sit amet. Purus in mollis nunc sed id semper risus in.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="col-md-12 col-12 forum-info text-left">
-                              <div className="mt-2" style={{ display: "inline-block" }}>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-edit" /> Edit
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-user-tag" /> Assign
-                                </button>
-                                <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
-                                  <i className="fa fa-vial" /> Simulate
-                                </button>
-                              </div>
-                              <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                                <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
-                                  <i className="fas fa-play" aria-hidden="true" />
-                                </button>
-                                <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                                  <i className="fas fa-comment-dots" aria-hidden="true" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <nav aria-label="Page navigation example">
-                        <ul className="pagination justify-content-center">
-                          <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">«</span>
-                              <span className="sr-only">Previous</span>
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              1
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              2
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              3
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">»</span>
-                              <span className="sr-only">Next</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-12 grid-margin stretch-card">
+            <div className="card">
+              <div className="card-body">
+                <div className="form-check">
+                  <label className="form-check-label">
+                    <input type="checkbox" className="form-check-input" />
+                    Show Archived Reports
+                    <i className="input-helper" />
+                  </label>
                 </div>
+                <hr />
+                <table id="data-table-generate-report" className="table table-striped table-bordered" style={{ width: "100%" }}>
+                  <thead>
+                    <tr>
+                      <th>Document Name</th>
+                      <th>Generated By</th>
+                      <th>Belongs To</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Generation</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>63</td>
+                      <td>2011/07/25</td>
+                      <td>$170,750</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td>66</td>
+                      <td>2009/01/12</td>
+                      <td>$86,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Cedric Kelly</td>
+                      <td>Senior Javascript Developer</td>
+                      <td>Edinburgh</td>
+                      <td>22</td>
+                      <td>2012/03/29</td>
+                      <td>$433,060</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Airi Satou</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>33</td>
+                      <td>2008/11/28</td>
+                      <td>$162,700</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Brielle Williamson</td>
+                      <td>Integration Specialist</td>
+                      <td>New York</td>
+                      <td>61</td>
+                      <td>2012/12/02</td>
+                      <td>$372,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Herrod Chandler</td>
+                      <td>Sales Assistant</td>
+                      <td>San Francisco</td>
+                      <td>59</td>
+                      <td>2012/08/06</td>
+                      <td>$137,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Rhona Davidson</td>
+                      <td>Integration Specialist</td>
+                      <td>Tokyo</td>
+                      <td>55</td>
+                      <td>2010/10/14</td>
+                      <td>$327,900</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Colleen Hurst</td>
+                      <td>Javascript Developer</td>
+                      <td>San Francisco</td>
+                      <td>39</td>
+                      <td>2009/09/15</td>
+                      <td>$205,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Sonya Frost</td>
+                      <td>Software Engineer</td>
+                      <td>Edinburgh</td>
+                      <td>23</td>
+                      <td>2008/12/13</td>
+                      <td>$103,600</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Jena Gaines</td>
+                      <td>Office Manager</td>
+                      <td>London</td>
+                      <td>30</td>
+                      <td>2008/12/19</td>
+                      <td>$90,560</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Quinn Flynn</td>
+                      <td>Support Lead</td>
+                      <td>Edinburgh</td>
+                      <td>22</td>
+                      <td>2013/03/03</td>
+                      <td>$342,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Charde Marshall</td>
+                      <td>Regional Director</td>
+                      <td>San Francisco</td>
+                      <td>36</td>
+                      <td>2008/10/16</td>
+                      <td>$470,600</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Haley Kennedy</td>
+                      <td>Senior Marketing Designer</td>
+                      <td>London</td>
+                      <td>43</td>
+                      <td>2012/12/18</td>
+                      <td>$313,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tatyana Fitzpatrick</td>
+                      <td>Regional Director</td>
+                      <td>London</td>
+                      <td>19</td>
+                      <td>2010/03/17</td>
+                      <td>$385,750</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Michael Silva</td>
+                      <td>Marketing Designer</td>
+                      <td>London</td>
+                      <td>66</td>
+                      <td>2012/11/27</td>
+                      <td>$198,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Paul Byrd</td>
+                      <td>Chief Financial Officer (CFO)</td>
+                      <td>New York</td>
+                      <td>64</td>
+                      <td>2010/06/09</td>
+                      <td>$725,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Gloria Little</td>
+                      <td>Systems Administrator</td>
+                      <td>New York</td>
+                      <td>59</td>
+                      <td>2009/04/10</td>
+                      <td>$237,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Bradley Greer</td>
+                      <td>Software Engineer</td>
+                      <td>London</td>
+                      <td>41</td>
+                      <td>2012/10/13</td>
+                      <td>$132,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dai Rios</td>
+                      <td>Personnel Lead</td>
+                      <td>Edinburgh</td>
+                      <td>35</td>
+                      <td>2012/09/26</td>
+                      <td>$217,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Jenette Caldwell</td>
+                      <td>Development Lead</td>
+                      <td>New York</td>
+                      <td>30</td>
+                      <td>2011/09/03</td>
+                      <td>$345,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Yuri Berry</td>
+                      <td>Chief Marketing Officer (CMO)</td>
+                      <td>New York</td>
+                      <td>40</td>
+                      <td>2009/06/25</td>
+                      <td>$675,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Caesar Vance</td>
+                      <td>Pre-Sales Support</td>
+                      <td>New York</td>
+                      <td>21</td>
+                      <td>2011/12/12</td>
+                      <td>$106,450</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Doris Wilder</td>
+                      <td>Sales Assistant</td>
+                      <td>Sydney</td>
+                      <td>23</td>
+                      <td>2010/09/20</td>
+                      <td>$85,600</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Angelica Ramos</td>
+                      <td>Chief Executive Officer (CEO)</td>
+                      <td>London</td>
+                      <td>47</td>
+                      <td>2009/10/09</td>
+                      <td>$1,200,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Gavin Joyce</td>
+                      <td>Developer</td>
+                      <td>Edinburgh</td>
+                      <td>42</td>
+                      <td>2010/12/22</td>
+                      <td>$92,575</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Jennifer Chang</td>
+                      <td>Regional Director</td>
+                      <td>Singapore</td>
+                      <td>28</td>
+                      <td>2010/11/14</td>
+                      <td>$357,650</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Brenden Wagner</td>
+                      <td>Software Engineer</td>
+                      <td>San Francisco</td>
+                      <td>28</td>
+                      <td>2011/06/07</td>
+                      <td>$206,850</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Fiona Green</td>
+                      <td>Chief Operating Officer (COO)</td>
+                      <td>San Francisco</td>
+                      <td>48</td>
+                      <td>2010/03/11</td>
+                      <td>$850,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Shou Itou</td>
+                      <td>Regional Marketing</td>
+                      <td>Tokyo</td>
+                      <td>20</td>
+                      <td>2011/08/14</td>
+                      <td>$163,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Michelle House</td>
+                      <td>Integration Specialist</td>
+                      <td>Sydney</td>
+                      <td>37</td>
+                      <td>2011/06/02</td>
+                      <td>$95,400</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Suki Burks</td>
+                      <td>Developer</td>
+                      <td>London</td>
+                      <td>53</td>
+                      <td>2009/10/22</td>
+                      <td>$114,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Prescott Bartlett</td>
+                      <td>Technical Author</td>
+                      <td>London</td>
+                      <td>27</td>
+                      <td>2011/05/07</td>
+                      <td>$145,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Gavin Cortez</td>
+                      <td>Team Leader</td>
+                      <td>San Francisco</td>
+                      <td>22</td>
+                      <td>2008/10/26</td>
+                      <td>$235,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Martena Mccray</td>
+                      <td>Post-Sales support</td>
+                      <td>Edinburgh</td>
+                      <td>46</td>
+                      <td>2011/03/09</td>
+                      <td>$324,050</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Unity Butler</td>
+                      <td>Marketing Designer</td>
+                      <td>San Francisco</td>
+                      <td>47</td>
+                      <td>2009/12/09</td>
+                      <td>$85,675</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Howard Hatfield</td>
+                      <td>Office Manager</td>
+                      <td>San Francisco</td>
+                      <td>51</td>
+                      <td>2008/12/16</td>
+                      <td>$164,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hope Fuentes</td>
+                      <td>Secretary</td>
+                      <td>San Francisco</td>
+                      <td>41</td>
+                      <td>2010/02/12</td>
+                      <td>$109,850</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Vivian Harrell</td>
+                      <td>Financial Controller</td>
+                      <td>San Francisco</td>
+                      <td>62</td>
+                      <td>2009/02/14</td>
+                      <td>$452,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Timothy Mooney</td>
+                      <td>Office Manager</td>
+                      <td>London</td>
+                      <td>37</td>
+                      <td>2008/12/11</td>
+                      <td>$136,200</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Jackson Bradshaw</td>
+                      <td>Director</td>
+                      <td>New York</td>
+                      <td>65</td>
+                      <td>2008/09/26</td>
+                      <td>$645,750</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Olivia Liang</td>
+                      <td>Support Engineer</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2011/02/03</td>
+                      <td>$234,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Bruno Nash</td>
+                      <td>Software Engineer</td>
+                      <td>London</td>
+                      <td>38</td>
+                      <td>2011/05/03</td>
+                      <td>$163,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Sakura Yamamoto</td>
+                      <td>Support Engineer</td>
+                      <td>Tokyo</td>
+                      <td>37</td>
+                      <td>2009/08/19</td>
+                      <td>$139,575</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Thor Walton</td>
+                      <td>Developer</td>
+                      <td>New York</td>
+                      <td>61</td>
+                      <td>2013/08/11</td>
+                      <td>$98,540</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Finn Camacho</td>
+                      <td>Support Engineer</td>
+                      <td>San Francisco</td>
+                      <td>47</td>
+                      <td>2009/07/07</td>
+                      <td>$87,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Serge Baldwin</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Zenaida Frank</td>
+                      <td>Software Engineer</td>
+                      <td>New York</td>
+                      <td>63</td>
+                      <td>2010/01/04</td>
+                      <td>$125,250</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Zorita Serrano</td>
+                      <td>Software Engineer</td>
+                      <td>San Francisco</td>
+                      <td>56</td>
+                      <td>2012/06/01</td>
+                      <td>$115,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Jennifer Acosta</td>
+                      <td>Junior Javascript Developer</td>
+                      <td>Edinburgh</td>
+                      <td>43</td>
+                      <td>2013/02/01</td>
+                      <td>$75,650</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Cara Stevens</td>
+                      <td>Sales Assistant</td>
+                      <td>New York</td>
+                      <td>46</td>
+                      <td>2011/12/06</td>
+                      <td>$145,600</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hermione Butler</td>
+                      <td>Regional Director</td>
+                      <td>London</td>
+                      <td>47</td>
+                      <td>2011/03/21</td>
+                      <td>$356,250</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Lael Greer</td>
+                      <td>Systems Administrator</td>
+                      <td>London</td>
+                      <td>21</td>
+                      <td>2009/02/27</td>
+                      <td>$103,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Jonas Alexander</td>
+                      <td>Developer</td>
+                      <td>San Francisco</td>
+                      <td>30</td>
+                      <td>2010/07/14</td>
+                      <td>$86,500</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Shad Decker</td>
+                      <td>Regional Director</td>
+                      <td>Edinburgh</td>
+                      <td>51</td>
+                      <td>2008/11/13</td>
+                      <td>$183,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Michael Bruce</td>
+                      <td>Javascript Developer</td>
+                      <td>Singapore</td>
+                      <td>29</td>
+                      <td>2011/06/27</td>
+                      <td>$183,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Donna Snider</td>
+                      <td>Customer Support</td>
+                      <td>New York</td>
+                      <td>27</td>
+                      <td>2011/01/25</td>
+                      <td>$112,000</td>
+                      <td>
+                        <a href="#">Archive</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>Document Name</th>
+                      <th>Generated By</th>
+                      <th>Belongs To</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Generation</th>
+                      <th>Actions</th>
+                    </tr>
+                  </tfoot>
+                </table>
               </div>
             </div>
           </div>
@@ -847,7 +839,7 @@ return (
                           </td>
                           <td>February 10, 2022</td>
                           <td className="my-auto">
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#ba3742" />
                             </svg>
                             Pending
@@ -864,7 +856,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 10, 2022</td>
                           <td className="my-auto">
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#ba3742" />
                             </svg>
                             Pending
@@ -884,7 +876,7 @@ return (
                           </td>
                           <td>February 15, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#fc8a34" />
                             </svg>
                             Active
@@ -897,7 +889,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 15, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#fc8a34" />
                             </svg>
                             Active
@@ -913,7 +905,7 @@ return (
                           </td>
                           <td>February 20, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#529f50" />
                             </svg>
                             Completed
@@ -926,7 +918,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 20, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#529f50" />
                             </svg>
                             Completed
@@ -963,7 +955,7 @@ return (
                           </td>
                           <td>February 10, 2022</td>
                           <td className="my-auto">
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#ba3742" />
                             </svg>
                             Pending
@@ -980,7 +972,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 10, 2022</td>
                           <td className="my-auto">
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#ba3742" />
                             </svg>
                             Pending
@@ -997,7 +989,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 10, 2022</td>
                           <td className="my-auto">
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#ba3742" />
                             </svg>
                             Pending
@@ -1017,7 +1009,7 @@ return (
                           </td>
                           <td>February 15, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#fc8a34" />
                             </svg>
                             Active
@@ -1030,7 +1022,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 15, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#fc8a34" />
                             </svg>
                             Active
@@ -1043,7 +1035,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 15, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#fc8a34" />
                             </svg>
                             Active
@@ -1059,7 +1051,7 @@ return (
                           </td>
                           <td>February 20, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#529f50" />
                             </svg>
                             Completed
@@ -1072,7 +1064,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 20, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#529f50" />
                             </svg>
                             Completed
@@ -1085,7 +1077,7 @@ return (
                           <td>&nbsp;</td>
                           <td>February 20, 2022</td>
                           <td>
-                            <svg height={13} width={10}>
+                            <svg height={13} width={10} className="mr-1">
                               <circle cx={5} cy={5} r={5} fill="#529f50" />
                             </svg>
                             Completed

@@ -3,6 +3,7 @@ import { Appbar } from "./components/Appbar"
 import { Sidebar } from "./components/Sidebar"
 import { Footer } from "./components/Footer"
 import { ViewTemplateReport } from './containers/reports/ViewTemplateReport';
+import { GenerateReport } from './containers/reports/GenerateReport';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <div className="container-fluid page-body-wrapper">
         <Sidebar />
         <div className="main-panel">
-          <ViewTemplateReport />
+          {/* <ViewTemplateReport /> */}
+            <GenerateReport />
           <Footer />
         </div>
       </div>

@@ -6,6 +6,7 @@ import { ViewTemplateReport } from './containers/reports/ViewTemplateReport';
 import { GenerateReport } from './containers/reports/GenerateReport';
 import { AssignReport } from './containers/reports/AssignReport';
 import { Dashboard } from './containers/Dashboard';
+import { CreatorsHub } from './containers/CreatorsHub';
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <div className="container-fluid page-body-wrapper">
         <Sidebar />
         <div className="main-panel">
-          <Dashboard />
+          {/* <Dashboard /> */}
           {/* <ViewTemplateReport /> */}
           {/* <GenerateReport /> */}
           {/* <AssignReport /> */}
+          <CreatorsHub />
           <Footer />
         </div>
       </div>

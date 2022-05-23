@@ -158,79 +158,199 @@ a.forum-item-title:hover {
     Toggle Style
   * Custom Slider Styling
 */
-.switchToggle {
-  position: relative;
+.custom-toggle {
+  padding: 0px;
+  width: 100%;
   display: inline;
 }
-.switchToggle input[type="checkbox"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  position: absolute;
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 30px;
+  padding: 3px;
+  margin: 0 10px 10px 0;
+  background: linear-gradient(to bottom, #eeeeee, #ffffff 25px);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #ffffff 25px);
+  border-radius: 18px;
+  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+label {
+  font-weight: inherit;
 }
 .switchToggle label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 100px;
-  max-width: 100px;
-  height: 35px;
-  background: #4b49ac;
-  border-radius: 100px;
-  position: relative;
-  font-size: 10px;
-  line-height: 26px;
+  width: 100px !important;
+  max-width: 100px !important;
 }
-.switchToggle label:after {
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 4px 0 0;
+
+  line-height: normal;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  box-sizing: content-box;
+}
+.switch-left-right .switch-input:checked ~ .switch-label {
+  background: inherit;
+}
+.switch-input:checked ~ .switch-label {
+  /* background: #E1B42B; */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-left-right .switch-label {
+  overflow: hidden;
+}
+.switch-label,
+.switch-handle {
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
+}
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #eceeef;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  box-sizing: content-box;
+}
+.switch-left-right .switch-input:checked ~ .switch-label:before {
+  opacity: 1;
+  left: 100px;
+}
+.switch-input:checked ~ .switch-label:before {
+  opacity: 0;
+}
+.switch-left-right .switch-label:before {
+  background: #eceeef;
+  text-align: left;
+  padding-left: 80px !important;
+}
+.switch-left-right .switch-label:before,
+.switch-left-right .switch-label:after {
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 11px 0 0 0;
+  text-indent: -12px;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: #aaaaaa;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+span.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: #ffffff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+.switch-label:before,
+.switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+  box-sizing: content-box;
+}
+
+.switch-left-right .switch-input:checked ~ .switch-label:after {
+  left: 0 !important;
+  opacity: 1;
+  padding-left: 20px;
+}
+
+.switch-input:checked ~ .switch-label:after {
+  opacity: 1;
+}
+
+.switch-left-right .switch-label:after {
+  text-align: left;
+  text-indent: 9px;
+  background: #4b49ac !important;
+  left: -100px !important;
+  opacity: 1;
+  width: 100% !important;
+}
+.switch-left-right .switch-label:before,
+.switch-left-right .switch-label:after {
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 11px 0 0 0;
+  text-indent: -12px;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.switch-input:checked ~ .switch-handle {
+  left: 74px;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-label,
+.switch-handle {
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(to bottom, #ffffff 40%, #f0f0f0);
+  background-image: -webkit-linear-gradient(top, #ffffff 40%, #f0f0f0);
+  border-radius: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-handle:before {
   content: "";
   position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 31px;
-  height: 31px;
-  background: #fff;
-  border-radius: 90px;
-  transition: 0.3s;
-}
-.switchToggle input:checked + label,
-.switchToggle input:checked + input + label {
-  background: #9b9b9b;
-}
-.switchToggle input + label:before,
-.switchToggle input + input + label:before {
-  content: "Initial Value";
-  position: absolute;
-  top: 5px;
-  left: 40px;
-  width: 100%;
-  height: 31px;
-  border-radius: 90px;
-  transition: 0.3s;
-  text-indent: 0;
-  color: #fff;
-}
-.switchToggle input:checked + label:before,
-.switchToggle input:checked + input + label:before {
-  content: "After Toggle Value";
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  width: 100%;
-  height: 31px;
-  border-radius: 90px;
-  transition: 0.3s;
-  text-indent: 0;
-  color: #fff;
-}
-.switchToggle input:checked + label:after,
-.switchToggle input:checked + input + label:after {
-  left: calc(100% - 2px);
-  transform: translateX(-100%);
-}
-.switchToggle label:active:after {
-  width: 60px;
-}
-.toggle-switchArea {
-  margin: 10px 0 10px 0;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(to bottom, #eeeeee, #ffffff);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #ffffff);
+  border-radius: 6px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
 }
 
 
@@ -311,7 +431,7 @@ a.forum-item-title:hover {
 */
 body.modal-open {
   overflow: hidden;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .modal.modal-fullscreen .modal-dialog {
@@ -509,4 +629,91 @@ label.star:hover {
 label.star:before {
   content: '\f006';
   font-family: FontAwesome
+}
+
+
+
+
+
+/*  
+    Comment Style
+  * Custom Comment Styling
+*/
+.comment {
+  overflow: hidden;
+  padding: 0 0 1em;
+  margin: 0 0 1em;
+  *zoom: 1;
+}
+.comment-img {
+  float: left;
+  margin-right: 33px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.comment-img img {
+  display: block;
+}
+.comment-body {
+  overflow: hidden;
+}
+.comment .text {
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background: #fff;
+}
+.comment .text p:last-child {
+  margin: 0;
+}
+.comment .attribution {
+  margin: 0.5em 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Decoration */
+.comments,
+.comment {
+  position: relative;
+}
+.comments:before,
+.comment:before,
+.comment .text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 65px;
+}
+.comments:before {
+  width: 3px;
+  top: -20px;
+  bottom: -20px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.comment:before {
+  width: 9px;
+  height: 9px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  margin: 16px 0 0 -6px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: #ccc;
+}
+.comment:hover:before {
+  background: orange;
+}
+.comment .text:before {
+  top: 18px;
+  left: 78px;
+  width: 9px;
+  height: 9px;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: #e5e5e5;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }

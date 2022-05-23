@@ -15,11 +15,11 @@ function App() {
       <div className="container-fluid page-body-wrapper">
         <Sidebar />
         <div className="main-panel">
-          {/* <Dashboard /> */}
+          <Dashboard />
           {/* <ViewTemplateReport /> */}
           {/* <GenerateReport /> */}
           {/* <AssignReport /> */}
-          <CreatorsHub />
+          {/* <CreatorsHub /> */}
           <Footer />
         </div>
       </div>

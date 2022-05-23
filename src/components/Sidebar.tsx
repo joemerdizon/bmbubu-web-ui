@@ -82,111 +82,140 @@ export const Sidebar = () => {
                                 />
                     })*/}
                      
-                    <li className="nav-item">
-                        <a className="nav-link" href="index.html">              
-                        <i className="fa-solid fa-gauge menu-icon"></i>
-                        <span className="menu-title">Dashboard</span>
+                     <li className="nav-item">
+                        <a className="nav-link" href="index.html">
+                            <i className="fa-solid fa-gauge menu-icon" />
+                            <span className="menu-title">Dashboard</span>
                         </a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" data-toggle="collapse" href="#nav-item-task" aria-expanded="false" aria-controls="nav-item-task">
-                        <i className="fa-solid fa-tasks menu-icon"></i>
-                        <span className="menu-title">Task</span>
-                        <i className="menu-arrow"></i>
+                            <i className="fa-solid fa-tasks menu-icon" />
+                            <span className="menu-title">Task</span>
+                            <i className="menu-arrow" />
                         </a>
                         <div className="collapse" id="nav-item-task">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="#">Personal</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="#">Ad hoc</a></li>
-                        </ul>
+                            <ul className="nav flex-column sub-menu">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        Personal
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        Ad hoc
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </li>        
+                    </li>
                     <li className="nav-item">
                         <a className="nav-link" data-toggle="collapse" href="#nav-item-reports" aria-expanded="false" aria-controls="nav-item-reports">
-                        <i className="fa-solid fa-edit menu-icon"></i>
-                        <span className="menu-title">Reports</span>
-                        <i className="menu-arrow"></i>
+                            <i className="fa-solid fa-file-lines menu-icon" />
+                            <span className="menu-title">Reports</span>
+                            <i className="menu-arrow" />
                         </a>
                         <div className="collapse" id="nav-item-reports">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="view-template-report.html">View Template Report</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="generate-report.html">Generate Report</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="assign-report.html">Assign Report</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="#">My Generated Report</a></li>
-                        </ul>
+                            <ul className="nav flex-column sub-menu">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="view-template-report.html">
+                                        View Template Report
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="generate-report.html">
+                                        Generate Report
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="assign-report.html">
+                                        Assign Report
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        My Generated Report
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="creators-hub.html">
-                        <i className="fa-solid fa-desktop menu-icon"></i>
-                        <span className="menu-title">Creators Hub</span>
+                            <i className="fa-solid fa-desktop menu-icon" />
+                            <span className="menu-title">Creators Hub</span>
                         </a>
-                    </li>          
+                    </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-ticket menu-icon"></i>
-                        <span className="menu-title">Tickets</span>
+                        <a className="nav-link" data-toggle="collapse" href="#nav-item-tickets" aria-expanded="false" aria-controls="nav-item-tickets">
+                            <i className="fa-solid fa-ticket menu-icon" />
+                            <span className="menu-title">Tickets</span>
+                            <i className="menu-arrow" />
                         </a>
-                    </li>    
+                        <div className="collapse" id="nav-item-tickets">
+                            <ul className="nav flex-column sub-menu">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="generate-ticket-report.html">
+                                        Generate Ticket Report
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="submit-a-ticket.html">
+                                        Submit a Ticket
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     <li className="nav-item">
                         <a className="nav-link" data-toggle="collapse" href="#nav-item-approval" aria-expanded="false" aria-controls="nav-item-approval">
-                        <i className="fa-solid fa-thumbs-up menu-icon"></i>
-                        <span className="menu-title">Approval</span>
-                        <i className="menu-arrow"></i>
+                            <i className="fa-solid fa-thumbs-up menu-icon" />
+                            <span className="menu-title">Approval</span>
+                            <i className="menu-arrow" />
                         </a>
                         <div className="collapse" id="nav-item-approval">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="#">Request</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="#">Submit</a></li>
-                        </ul>
+                            <ul className="nav flex-column sub-menu">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        Request
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        Submit
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </li>                   
+                    </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-file-text menu-icon"></i>
-                        <span className="menu-title">Files</span>
+                        <a className="nav-link" href="files.html">
+                            <i className="fa-solid fa-laptop-file menu-icon" />
+                            <span className="menu-title">Files</span>
                         </a>
-                    </li>          
+                    </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-comments menu-icon"></i>
-                        <span className="menu-title">Comments and Notes</span>
+                        <a className="nav-link" href="comments-and-notes.html">
+                            <i className="fa-solid fa-comments menu-icon" />
+                            <span className="menu-title">Comments and Notes</span>
                         </a>
-                    </li>          
+                    </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-shopping-bag menu-icon"></i>
-                        <span className="menu-title">Market Place</span>
+                        <a className="nav-link" href="#">
+                            <i className="fa-solid fa-shopping-bag menu-icon" />
+                            <span className="menu-title">Market Place</span>
                         </a>
-                    </li>          
+                    </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-phone-square menu-icon"></i>
-                        <span className="menu-title">Contacts</span>
+                        <a className="nav-link" href="contacts.html">
+                            <i className="fa-solid fa-phone-square menu-icon" />
+                            <span className="menu-title">Contacts</span>
                         </a>
-                    </li>          
+                    </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-cogs menu-icon"></i>
-                        <span className="menu-title">Settings</span>
-                        </a>
-                    </li>          
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-book menu-icon"></i>
-                        <span className="menu-title">Content Library</span>
-                        </a>
-                    </li>          
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-database menu-icon"></i>
-                        <span className="menu-title">Backup</span>
-                        </a>
-                    </li> 
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">              
-                        <i className="fa-solid fa-user menu-icon"></i>
-                        <span className="menu-title">Client Admin Tab</span>
+                        <a className="nav-link" href="#">
+                            <i className="fa-solid fa-cogs menu-icon" />
+                            <span className="menu-title">Settings</span>
                         </a>
                     </li>
                 </ul>

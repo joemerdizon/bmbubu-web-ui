@@ -10,7 +10,7 @@ export const ViewTemplateReport = () => {
           <div className="card">
             <div className="card-body">
               <p className="card-title">
-                <i className="fa fa-edit mr-2" />
+                <i className="fa fa-edit" />
                 View Template Reports
                 <button type="button" className="btn btn-primary btn-sm btn-icon-text float-right">
                   <i className="fa-solid fa-circle-plus mr-1" />
@@ -48,12 +48,15 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <div className="row border rounded pb-3 pt-4 mb-5">
                         <div className="col-md-8 col-sm-8">
-                          <div className="switchToggle mr-2">
-                            <small className="font-weight-bold mr-2">Sort by:</small>
-                            <input type="checkbox" id="switch" />
-                            <label htmlFor="switch">Toggle</label>
+                          <div className="custom-toggle">
+                            <small className="font-weight-bold">Sort by:</small>
+                            <label className="switch switch-left-right">
+                              <input className="switch-input" type="checkbox" defaultChecked />
+                              <span className="switch-label" data-on="Asc" data-off="Desc" />
+                              <span className="switch-handle" />
+                            </label>
                           </div>
-                          <div className="btn-group mt-2" role="group" aria-label="Basic example">
+                          <div className="btn-group" role="group" aria-label="Basic example">
                             <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
                               <i className="fa-solid fa-envelope-open-text mr-1" /> Title
                             </button>
@@ -105,28 +108,28 @@ export const ViewTemplateReport = () => {
                                 </span>
                               </small>
                               <p className="m-0">
-                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                                amet. Purus in mollis nunc sed id semper risus in.
+                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
+                                sit amet. Purus in mollis nunc sed id semper risus in.
                               </p>
                             </div>
                           </div>
                           <div className="col-md-12 col-12 forum-info text-left">
                             <div className="mt-2" style={{ display: "inline-block" }}>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-edit" /> Edit
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-user-tag" /> Assign
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-vial" /> Simulate
                               </button>
                             </div>
                             <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                              <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
+                              <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Play">
                                 <i className="fas fa-play" aria-hidden="true" />
                               </button>
-                              <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                              <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                                 <i className="fas fa-comment-dots" aria-hidden="true" />
                               </button>
                             </div>
@@ -161,28 +164,28 @@ export const ViewTemplateReport = () => {
                                 </span>
                               </small>
                               <p className="m-0">
-                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                                amet. Purus in mollis nunc sed id semper risus in.
+                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
+                                sit amet. Purus in mollis nunc sed id semper risus in.
                               </p>
                             </div>
                           </div>
                           <div className="col-md-12 col-12 forum-info text-left">
                             <div className="mt-2" style={{ display: "inline-block" }}>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-edit" /> Edit
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-user-tag" /> Assign
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-vial" /> Simulate
                               </button>
                             </div>
                             <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                              <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
+                              <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Play">
                                 <i className="fas fa-play" aria-hidden="true" />
                               </button>
-                              <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                              <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                                 <i className="fas fa-comment-dots" aria-hidden="true" />
                               </button>
                             </div>
@@ -217,28 +220,28 @@ export const ViewTemplateReport = () => {
                                 </span>
                               </small>
                               <p className="m-0">
-                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                                amet. Purus in mollis nunc sed id semper risus in.
+                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
+                                sit amet. Purus in mollis nunc sed id semper risus in.
                               </p>
                             </div>
                           </div>
                           <div className="col-md-12 col-12 forum-info text-left">
                             <div className="mt-2" style={{ display: "inline-block" }}>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-edit" /> Edit
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-user-tag" /> Assign
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-vial" /> Simulate
                               </button>
                             </div>
                             <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                              <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
+                              <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Play">
                                 <i className="fas fa-play" aria-hidden="true" />
                               </button>
-                              <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                              <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                                 <i className="fas fa-comment-dots" aria-hidden="true" />
                               </button>
                             </div>
@@ -273,28 +276,28 @@ export const ViewTemplateReport = () => {
                                 </span>
                               </small>
                               <p className="m-0">
-                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                                amet. Purus in mollis nunc sed id semper risus in.
+                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
+                                sit amet. Purus in mollis nunc sed id semper risus in.
                               </p>
                             </div>
                           </div>
                           <div className="col-md-12 col-12 forum-info text-left">
                             <div className="mt-2" style={{ display: "inline-block" }}>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-edit" /> Edit
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-user-tag" /> Assign
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-vial" /> Simulate
                               </button>
                             </div>
                             <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                              <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
+                              <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Play">
                                 <i className="fas fa-play" aria-hidden="true" />
                               </button>
-                              <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                              <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                                 <i className="fas fa-comment-dots" aria-hidden="true" />
                               </button>
                             </div>
@@ -340,12 +343,15 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <div className="row border rounded pb-3 pt-4 mb-5">
                         <div className="col-md-8 col-sm-8">
-                          <div className="switchToggle mr-2">
-                            <small className="font-weight-bold mr-2">Sort by:</small>
-                            <input type="checkbox" id="switch" />
-                            <label htmlFor="switch">Toggle</label>
+                          <div className="custom-toggle">
+                            <small className="font-weight-bold">Sort by:</small>
+                            <label className="switch switch-left-right">
+                              <input className="switch-input" type="checkbox" defaultChecked />
+                              <span className="switch-label" data-on="Asc" data-off="Desc" />
+                              <span className="switch-handle" />
+                            </label>
                           </div>
-                          <div className="btn-group mt-2" role="group" aria-label="Basic example">
+                          <div className="btn-group" role="group" aria-label="Basic example">
                             <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
                               <i className="fa-solid fa-envelope-open-text mr-1" /> Title
                             </button>
@@ -391,28 +397,28 @@ export const ViewTemplateReport = () => {
                                 </span>
                               </small>
                               <p className="m-0">
-                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                                amet. Purus in mollis nunc sed id semper risus in.
+                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
+                                sit amet. Purus in mollis nunc sed id semper risus in.
                               </p>
                             </div>
                           </div>
                           <div className="col-md-12 col-12 forum-info text-left">
                             <div className="mt-2" style={{ display: "inline-block" }}>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-edit" /> Edit
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-user-tag" /> Assign
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-vial" /> Simulate
                               </button>
                             </div>
                             <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                              <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
+                              <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Play">
                                 <i className="fas fa-play" aria-hidden="true" />
                               </button>
-                              <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                              <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                                 <i className="fas fa-comment-dots" aria-hidden="true" />
                               </button>
                             </div>
@@ -441,28 +447,28 @@ export const ViewTemplateReport = () => {
                                 </span>
                               </small>
                               <p className="m-0">
-                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                                amet. Purus in mollis nunc sed id semper risus in.
+                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
+                                sit amet. Purus in mollis nunc sed id semper risus in.
                               </p>
                             </div>
                           </div>
                           <div className="col-md-12 col-12 forum-info text-left">
                             <div className="mt-2" style={{ display: "inline-block" }}>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-edit" /> Edit
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-user-tag" /> Assign
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-vial" /> Simulate
                               </button>
                             </div>
                             <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                              <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
+                              <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Play">
                                 <i className="fas fa-play" aria-hidden="true" />
                               </button>
-                              <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                              <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                                 <i className="fas fa-comment-dots" aria-hidden="true" />
                               </button>
                             </div>
@@ -508,12 +514,15 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <div className="row border rounded pb-3 pt-4 mb-5">
                         <div className="col-md-8 col-sm-8">
-                          <div className="switchToggle mr-2">
-                            <small className="font-weight-bold mr-2">Sort by:</small>
-                            <input type="checkbox" id="switch" />
-                            <label htmlFor="switch">Toggle</label>
+                          <div className="custom-toggle">
+                            <small className="font-weight-bold">Sort by:</small>
+                            <label className="switch switch-left-right">
+                              <input className="switch-input" type="checkbox" defaultChecked />
+                              <span className="switch-label" data-on="Asc" data-off="Desc" />
+                              <span className="switch-handle" />
+                            </label>
                           </div>
-                          <div className="btn-group mt-2" role="group" aria-label="Basic example">
+                          <div className="btn-group" role="group" aria-label="Basic example">
                             <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
                               <i className="fa-solid fa-envelope-open-text mr-1" /> Title
                             </button>
@@ -559,28 +568,28 @@ export const ViewTemplateReport = () => {
                                 </span>
                               </small>
                               <p className="m-0">
-                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                                amet. Purus in mollis nunc sed id semper risus in.
+                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
+                                sit amet. Purus in mollis nunc sed id semper risus in.
                               </p>
                             </div>
                           </div>
                           <div className="col-md-12 col-12 forum-info text-left">
                             <div className="mt-2" style={{ display: "inline-block" }}>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-edit" /> Edit
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-user-tag" /> Assign
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-vial" /> Simulate
                               </button>
                             </div>
                             <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                              <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
+                              <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Play">
                                 <i className="fas fa-play" aria-hidden="true" />
                               </button>
-                              <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                              <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                                 <i className="fas fa-comment-dots" aria-hidden="true" />
                               </button>
                             </div>
@@ -626,12 +635,15 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <div className="row border rounded pb-3 pt-4 mb-5">
                         <div className="col-md-8 col-sm-8">
-                          <div className="switchToggle mr-2">
-                            <small className="font-weight-bold mr-2">Sort by:</small>
-                            <input type="checkbox" id="switch" />
-                            <label htmlFor="switch">Toggle</label>
+                          <div className="custom-toggle">
+                            <small className="font-weight-bold">Sort by:</small>
+                            <label className="switch switch-left-right">
+                              <input className="switch-input" type="checkbox" defaultChecked />
+                              <span className="switch-label" data-on="Asc" data-off="Desc" />
+                              <span className="switch-handle" />
+                            </label>
                           </div>
-                          <div className="btn-group mt-2" role="group" aria-label="Basic example">
+                          <div className="btn-group" role="group" aria-label="Basic example">
                             <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
                               <i className="fa-solid fa-envelope-open-text mr-1" /> Title
                             </button>
@@ -677,28 +689,28 @@ export const ViewTemplateReport = () => {
                                 </span>
                               </small>
                               <p className="m-0">
-                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                                amet. Purus in mollis nunc sed id semper risus in.
+                                Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna
+                                sit amet. Purus in mollis nunc sed id semper risus in.
                               </p>
                             </div>
                           </div>
                           <div className="col-md-12 col-12 forum-info text-left">
                             <div className="mt-2" style={{ display: "inline-block" }}>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-edit" /> Edit
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-user-tag" /> Assign
                               </button>
-                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mx-1">
+                              <button type="button" className="btn btn-outline-primary btn-icon-text btn-sm mr-1">
                                 <i className="fa fa-vial" /> Simulate
                               </button>
                             </div>
                             <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                              <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Play">
+                              <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Play">
                                 <i className="fas fa-play" aria-hidden="true" />
                               </button>
-                              <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                              <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                                 <i className="fas fa-comment-dots" aria-hidden="true" />
                               </button>
                             </div>

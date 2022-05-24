@@ -10,7 +10,7 @@ export const AssignReport = () => {
           <div className="card">
             <div className="card-body">
               <p className="card-title">
-                <i className="fa fa-edit mr-2" />
+                <i className="fa fa-edit" />
                 Assigned Reports
                 <button type="button" className="btn btn-primary btn-sm btn-icon-text float-right">
                   <i className="fa-solid fa-circle-plus mr-1" />
@@ -23,12 +23,15 @@ export const AssignReport = () => {
               <div className="ibox-content forum-container mx-3 mt-4">
                 <div className="row border rounded pb-3 pt-4 mb-5">
                   <div className="col-md-8 col-sm-8">
-                    <div className="switchToggle mr-2">
-                      <small className="font-weight-bold mr-2">Sort by:</small>
-                      <input type="checkbox" id="switch" />
-                      <label htmlFor="switch">Toggle</label>
+                    <div className="custom-toggle">
+                      <small className="font-weight-bold">Sort by:</small>
+                      <label className="switch switch-left-right">
+                        <input className="switch-input" type="checkbox" defaultChecked />
+                        <span className="switch-label" data-on="Asc" data-off="Desc" />
+                        <span className="switch-handle" />
+                      </label>
                     </div>
-                    <div className="btn-group mt-2" role="group" aria-label="Basic example">
+                    <div className="btn-group" role="group" aria-label="Basic example">
                       <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
                         <i className="fa-solid fa-envelope-open-text mr-1" /> Title
                       </button>
@@ -74,10 +77,7 @@ export const AssignReport = () => {
                             <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
                           </span>
                         </small>
-                        <p className="m-0">
-                          Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                          amet. Purus in mollis nunc sed id semper risus in.
-                        </p>
+                        <p className="m-0">Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in.</p>
                       </div>
                     </div>
                     <div className="col-md-9 col-12">
@@ -92,10 +92,10 @@ export const AssignReport = () => {
                     </div>
                     <div className="col-md-3 col-12">
                       <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                        <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
+                        <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
                           <i className="fas fa-list-check" aria-hidden="true" />
                         </button>
-                        <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                        <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                           <i className="fas fa-comment-dots" aria-hidden="true" />
                         </button>
                       </div>
@@ -124,10 +124,7 @@ export const AssignReport = () => {
                             <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
                           </span>
                         </small>
-                        <p className="m-0">
-                          Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                          amet. Purus in mollis nunc sed id semper risus in.
-                        </p>
+                        <p className="m-0">Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in.</p>
                       </div>
                     </div>
                     <div className="col-md-9 col-12">
@@ -142,10 +139,10 @@ export const AssignReport = () => {
                     </div>
                     <div className="col-md-3 col-12">
                       <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                        <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
+                        <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
                           <i className="fas fa-list-check" aria-hidden="true" />
                         </button>
-                        <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                        <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                           <i className="fas fa-comment-dots" aria-hidden="true" />
                         </button>
                       </div>
@@ -174,10 +171,7 @@ export const AssignReport = () => {
                             <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
                           </span>
                         </small>
-                        <p className="m-0">
-                          Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                          amet. Purus in mollis nunc sed id semper risus in.
-                        </p>
+                        <p className="m-0">Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in.</p>
                       </div>
                     </div>
                     <div className="col-md-9 col-12">
@@ -192,10 +186,10 @@ export const AssignReport = () => {
                     </div>
                     <div className="col-md-3 col-12">
                       <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                        <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
+                        <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
                           <i className="fas fa-list-check" aria-hidden="true" />
                         </button>
-                        <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                        <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                           <i className="fas fa-comment-dots" aria-hidden="true" />
                         </button>
                       </div>
@@ -224,10 +218,7 @@ export const AssignReport = () => {
                             <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
                           </span>
                         </small>
-                        <p className="m-0">
-                          Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit
-                          amet. Purus in mollis nunc sed id semper risus in.
-                        </p>
+                        <p className="m-0">Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in.</p>
                       </div>
                     </div>
                     <div className="col-md-9 col-12">
@@ -242,10 +233,10 @@ export const AssignReport = () => {
                     </div>
                     <div className="col-md-3 col-12">
                       <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                        <button type="button" className="btn btn-danger btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
+                        <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
                           <i className="fas fa-list-check" aria-hidden="true" />
                         </button>
-                        <button type="button" className="btn btn-warning btn-rounded btn-icon mx-1" data-toggle="tooltip" data-placement="bottom" title="Chat">
+                        <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
                           <i className="fas fa-comment-dots" aria-hidden="true" />
                         </button>
                       </div>

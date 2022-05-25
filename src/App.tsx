@@ -18,8 +18,8 @@ function App() {
           {/* <Dashboard /> */}
           {/* <ViewTemplateReport /> */}
           {/* <GenerateReport /> */}
-          <AssignReport />
-          {/* <CreatorsHub /> */}
+          {/* <AssignReport /> */}
+          <CreatorsHub />
           <Footer />
         </div>
       </div>

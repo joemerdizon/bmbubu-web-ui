@@ -7,6 +7,7 @@ import { GenerateReport } from './containers/reports/GenerateReport';
 import { AssignReport } from './containers/reports/AssignReport';
 import { Dashboard } from './containers/Dashboard';
 import { CreatorsHub } from './containers/CreatorsHub';
+import { GenerateTicketReport } from './containers/GenerateTicketReport';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           {/* <ViewTemplateReport /> */}
           {/* <GenerateReport /> */}
           {/* <AssignReport /> */}
-          <CreatorsHub />
+          {/* <CreatorsHub /> */}
+          <GenerateTicketReport />
           <Footer />
         </div>
       </div>

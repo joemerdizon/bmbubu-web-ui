@@ -11,6 +11,7 @@ import { GenerateTicketReport } from './containers/GenerateTicketReport';
 import { SubmitATicket } from './containers/SubmitATicket';
 import { Files } from './containers/Files';
 import { CommentsAndNotes } from './containers/CommentsAndNotes';
+import { Contacts } from './containers/Contacts';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
           {/* <GenerateTicketReport /> */}
           {/* <SubmitATicket /> */}
           {/* <Files /> */}
-          <CommentsAndNotes />
+          {/* <CommentsAndNotes /> */}
+          <Contacts />
           <Footer />
         </div>
       </div>

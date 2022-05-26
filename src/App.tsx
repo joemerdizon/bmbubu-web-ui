@@ -10,6 +10,7 @@ import { CreatorsHub } from './containers/CreatorsHub';
 import { GenerateTicketReport } from './containers/GenerateTicketReport';
 import { SubmitATicket } from './containers/SubmitATicket';
 import { Files } from './containers/Files';
+import { CommentsAndNotes } from './containers/CommentsAndNotes';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
           {/* <CreatorsHub /> */}
           {/* <GenerateTicketReport /> */}
           {/* <SubmitATicket /> */}
-          <Files />
+          {/* <Files /> */}
+          <CommentsAndNotes />
           <Footer />
         </div>
       </div>

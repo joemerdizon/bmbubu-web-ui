@@ -21,7 +21,7 @@ function App() {
         <Sidebar />
         <div className="main-panel">
           {/* <Dashboard /> */}
-          {/* <ViewTemplateReport /> */}
+          <ViewTemplateReport />
           {/* <GenerateReport /> */}
           {/* <AssignReport /> */}
           {/* <CreatorsHub /> */}
@@ -29,7 +29,7 @@ function App() {
           {/* <SubmitATicket /> */}
           {/* <Files /> */}
           {/* <CommentsAndNotes /> */}
-          <Contacts />
+          {/* <Contacts /> */}
           <Footer />
         </div>
       </div>

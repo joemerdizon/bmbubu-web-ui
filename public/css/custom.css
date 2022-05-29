@@ -163,6 +163,12 @@ a.forum-item-title:hover {
   width: 100%;
   display: inline;
 }
+.custom-toggle small {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
 .switch {
   position: relative;
   display: inline-block;

@@ -20,6 +20,7 @@ export const ViewTemplateReport = () => {
               <div className="my-3">
                 <hr />
               </div>
+
               <ul className="nav nav-tabs" id="setting-panel" role="tablist">
                 <li className="nav-item">
                   <a className="nav-link active" id="all-reports-tab" data-toggle="tab" href="#all-reports-section" role="tab" aria-controls="all-reports-section" aria-expanded="true">

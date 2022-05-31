@@ -19,7 +19,7 @@ const defaultProps: AnchorProps = {
   tooltip     : {toggle: "", placement: "", title: ""},
   modal       : {toggle: "", target: ""},
   icon        : "",
-  value       : "Link"
+  value       : ""
 }
 
 export const Anchor : React.FunctionComponent<AnchorProps> = (props:any) => { 

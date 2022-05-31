@@ -19,7 +19,7 @@ const defaultProps: ButtonProps = {
   tooltip     : {toggle: "", placement: "", title: ""},
   modal       : {toggle: "", target: ""},
   icon        : "",
-  value       : "Button"
+  value       : ""
 }
 
 export const Button : React.FunctionComponent<ButtonProps> = (props:any) => { 

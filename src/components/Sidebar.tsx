@@ -3,6 +3,7 @@ import { Navigation, SubNavigation } from '../interfaces/SidebarItem';
 import { NavigationMockData } from '../mockData/NavigationMockData';
 import { Fab } from './Fab';
 import { isEmpty, map } from 'lodash';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -61,7 +62,7 @@ const NavigationItem: FC<Navigation> = (item: Navigation) => {
 export const Sidebar = () => {
 
     const [navigations, setNavigations] = useState<Navigation[]>([]);
-
+    const navigate = useNavigate();
     useEffect(() => {
         setNavigations(NavigationMockData);
     },[navigations]);
@@ -83,10 +84,10 @@ export const Sidebar = () => {
                     })*/}
                      
                      <li className="nav-item">
-                        <a className="nav-link" href="index.html">
+                        <Link to='/' className='nav-link'>
                             <i className="fa-solid fa-gauge menu-icon" />
                             <span className="menu-title">Dashboard</span>
-                        </a>
+                        </Link>                         
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" data-toggle="collapse" href="#nav-item-task" aria-expanded="false" aria-controls="nav-item-task">
@@ -118,19 +119,19 @@ export const Sidebar = () => {
                         <div className="collapse" id="nav-item-reports">
                             <ul className="nav flex-column sub-menu">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="view-template-report.html">
+                                    <Link to='/viewreporttemplate' className='nav-link'>
                                         View Template Report
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="generate-report.html">
+                                    <Link to='/generatereport' className='nav-link'>
                                         Generate Report
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="assign-report.html">
+                                    <Link to='/assignreport' className='nav-link'>
                                         Assign Report
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
@@ -141,10 +142,10 @@ export const Sidebar = () => {
                         </div>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="creators-hub.html">
+                        <Link to='/creatorshub' className="nav-link">
                             <i className="fa-solid fa-desktop menu-icon" />
                             <span className="menu-title">Creators Hub</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" data-toggle="collapse" href="#nav-item-tickets" aria-expanded="false" aria-controls="nav-item-tickets">

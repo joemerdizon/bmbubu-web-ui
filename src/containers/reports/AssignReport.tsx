@@ -1,8 +1,12 @@
 import React from "react"
-
+import { Pagination } from "../../components/custom-web-controls/Pagination"
+import { TabButton } from "../../components/custom-web-controls/TabButton"
+import { ReportHeaderOptions } from "./reports-component/ReportHeaderOptions"
+import { ReportDetails } from "./assign-report/ReportDetails"
 
 
 export const AssignReport = () => {
+  const pagination = ["assign-report-1", "assign-report-2", "assign-report-3"];
   return (
     <div className="content-wrapper">
       <div className="row">
@@ -19,231 +23,60 @@ export const AssignReport = () => {
               </p>
               <div className="my-3">
                 <hr />
+              </div>          
+
+              <div className="ibox-content forum-container mx-3 mt-4">                
+                <ReportHeaderOptions />
+                <ReportDetails 
+                  report_thumbnail={"images/assigned-templates/report1.png"} 
+                  report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"} 
+                  report_status={"Archive"} 
+                  report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
+                  icon_pin={"ti-pin2"} 
+                  created_by={"John Doe"}
+                  created_at={"February 06, 2022"} 
+                  updated_at={"February 07, 2022"}
+                  pb_style={{width : "25%"}}
+                  value_now={25}                  
+                />
+                <ReportDetails 
+                  report_thumbnail={"images/assigned-templates/report2.png"} 
+                  report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"} 
+                  report_status={"Active"} 
+                  report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
+                  icon_pin={"ti-pin2"} 
+                  created_by={"John Doe"}
+                  created_at={"February 06, 2022"} 
+                  updated_at={"February 07, 2022"}
+                  pb_style={{width : "100%"}}
+                  value_now={100}                  
+                />
+                <ReportDetails 
+                  report_thumbnail={"images/assigned-templates/report3.png"} 
+                  report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"} 
+                  report_status={"Inactive"} 
+                  report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
+                  icon_pin={"ti-pin-alt text-secondary"} 
+                  created_by={"John Doe"}
+                  created_at={"February 06, 2022"} 
+                  updated_at={"February 07, 2022"}
+                  pb_style={{width : "50%"}}
+                  value_now={50}                  
+                />
+                <ReportDetails 
+                  report_thumbnail={"images/assigned-templates/report4.png"} 
+                  report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"} 
+                  report_status={"Pending"} 
+                  report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
+                  icon_pin={"ti-pin-alt text-secondary"} 
+                  created_by={"John Doe"}
+                  created_at={"February 06, 2022"} 
+                  updated_at={"February 07, 2022"}
+                  pb_style={{width : "75%"}}
+                  value_now={75}                  
+                />                
               </div>
-              <div className="ibox-content forum-container mx-3 mt-4">
-                <div className="row border rounded pb-3 pt-4 mb-5">
-                  <div className="col-md-8 col-sm-8">
-                    <div className="custom-toggle">
-                      <small className="font-weight-bold">Sort by:</small>
-                      <label className="switch switch-left-right">
-                        <input className="switch-input" type="checkbox" defaultChecked />
-                        <span className="switch-label" data-on="Asc" data-off="Desc" />
-                        <span className="switch-handle" />
-                      </label>
-                    </div>
-                    <div className="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" className="btn btn-outline-primary btn-fw btn-xs active">
-                        <i className="fa-solid fa-envelope-open-text mr-1" /> Title
-                      </button>
-                      <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                        <i className="far fa-calendar-plus mr-1" /> Created at
-                      </button>
-                      <button type="button" className="btn btn-outline-primary btn-fw btn-xs">
-                        <i className="far fa-calendar-check mr-1"> </i> Updated at
-                      </button>
-                    </div>
-                  </div>
-                  <div className="col-md-4 col-sm-4">
-                    <div className="input-group">
-                      <input type="text" className="form-control" placeholder="Search for..." aria-label="Search for..." />
-                      <div className="input-group-append">
-                        <button className="btn btn-sm btn-primary" type="button">
-                          <i className="icon-search" />
-                          Search
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="forum-item">
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="forum-icon">
-                        <img src="images/assigned-templates/report1.png" className="forum-avatar" />
-                      </div>
-                      <a href="#" className="forum-item-title">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </a>
-                      <div className="forum-sub-title mt-1">
-                        <span className="badge badge-dark mr-2">Archive</span>
-                        <small className="text-secondary">
-                          <span className="mr-3">
-                            <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                          </span>
-                          <span className="mr-3">
-                            <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                          </span>
-                          <span>
-                            <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                          </span>
-                        </small>
-                        <p className="m-0">Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in.</p>
-                      </div>
-                    </div>
-                    <div className="col-md-9 col-12">
-                      <div className="forum-sub-title mt-2">
-                        <small>Report Progress:</small>
-                        <div className="progress" style={{ height: "20px" }}>
-                          <div className="progress-bar bg-dark" role="progressbar" style={{ width: "25%" }} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
-                            25%
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-3 col-12">
-                      <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                        <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
-                          <i className="fas fa-list-check" aria-hidden="true" />
-                        </button>
-                        <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                          <i className="fas fa-comment-dots" aria-hidden="true" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="forum-item">
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="forum-icon">
-                        <img src="images/assigned-templates/report2.png" className="forum-avatar" />
-                      </div>
-                      <a href="#" className="forum-item-title">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </a>
-                      <div className="forum-sub-title mt-1">
-                        <span className="badge badge-info mr-2">Active</span>
-                        <small className="text-secondary">
-                          <span className="mr-3">
-                            <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                          </span>
-                          <span className="mr-3">
-                            <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                          </span>
-                          <span>
-                            <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                          </span>
-                        </small>
-                        <p className="m-0">Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in.</p>
-                      </div>
-                    </div>
-                    <div className="col-md-9 col-12">
-                      <div className="forum-sub-title mt-2">
-                        <small>Report Progress:</small>
-                        <div className="progress" style={{ height: "20px" }}>
-                          <div className="progress-bar bg-info" role="progressbar" style={{ width: "100%" }} aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}>
-                            100%
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-3 col-12">
-                      <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                        <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
-                          <i className="fas fa-list-check" aria-hidden="true" />
-                        </button>
-                        <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                          <i className="fas fa-comment-dots" aria-hidden="true" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="forum-item">
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="forum-icon">
-                        <img src="images/assigned-templates/report3.png" className="forum-avatar" />
-                      </div>
-                      <a href="#" className="forum-item-title">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </a>
-                      <div className="forum-sub-title mt-1">
-                        <span className="badge badge-danger mr-2">Inactive</span>
-                        <small className="text-secondary">
-                          <span className="mr-3">
-                            <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                          </span>
-                          <span className="mr-3">
-                            <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                          </span>
-                          <span>
-                            <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                          </span>
-                        </small>
-                        <p className="m-0">Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in.</p>
-                      </div>
-                    </div>
-                    <div className="col-md-9 col-12">
-                      <div className="forum-sub-title mt-2">
-                        <small>Report Progress:</small>
-                        <div className="progress" style={{ height: "20px" }}>
-                          <div className="progress-bar bg-danger" role="progressbar" style={{ width: "50%" }} aria-valuenow={50} aria-valuemin={0} aria-valuemax={100}>
-                            50%
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-3 col-12">
-                      <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                        <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
-                          <i className="fas fa-list-check" aria-hidden="true" />
-                        </button>
-                        <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                          <i className="fas fa-comment-dots" aria-hidden="true" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="forum-item">
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="forum-icon">
-                        <img src="images/assigned-templates/report4.png" className="forum-avatar" />
-                      </div>
-                      <a href="#" className="forum-item-title">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </a>
-                      <div className="forum-sub-title mt-1">
-                        <span className="badge badge-warning mr-2">Pending</span>
-                        <small className="text-secondary">
-                          <span className="mr-3">
-                            <i className="fa fa-user-edit" /> <b>Created by:</b> John Doe
-                          </span>
-                          <span className="mr-3">
-                            <i className="far fa-calendar-plus" /> <b>Created:</b> February 06, 2022
-                          </span>
-                          <span>
-                            <i className="far fa-calendar-check" /> <b>Updated:</b> February 07, 2022
-                          </span>
-                        </small>
-                        <p className="m-0">Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in.</p>
-                      </div>
-                    </div>
-                    <div className="col-md-9 col-12">
-                      <div className="forum-sub-title mt-2">
-                        <small>Report Progress:</small>
-                        <div className="progress" style={{ height: "20px" }}>
-                          <div className="progress-bar bg-warning" role="progressbar" style={{ width: "75%" }} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
-                            75%
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-3 col-12">
-                      <div className="float-right mt-0" style={{ marginLeft: "100px" }}>
-                        <button type="button" className="btn btn-danger btn-rounded btn-icon mr-1" data-toggle="tooltip" data-placement="bottom" title="Generate">
-                          <i className="fas fa-list-check" aria-hidden="true" />
-                        </button>
-                        <button type="button" className="btn btn-warning btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="Chat">
-                          <i className="fas fa-comment-dots" aria-hidden="true" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Pagination href={pagination}/>
             </div>
           </div>
         </div>

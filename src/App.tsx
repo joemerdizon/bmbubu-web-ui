@@ -21,9 +21,9 @@ function App() {
         <Sidebar />
         <div className="main-panel">
           {/* <Dashboard /> */}
-          <ViewTemplateReport />
+          {/* <ViewTemplateReport /> */}
           {/* <GenerateReport /> */}
-          {/* <AssignReport /> */}
+          <AssignReport />
           {/* <CreatorsHub /> */}
           {/* <GenerateTicketReport /> */}
           {/* <SubmitATicket /> */}

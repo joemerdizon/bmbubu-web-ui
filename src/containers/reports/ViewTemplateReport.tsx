@@ -1,7 +1,7 @@
 import React from "react"
 import { Pagination } from "../../components/custom-web-controls/Pagination"
 import { TabButton } from "../../components/custom-web-controls/TabButton"
-import { ReportHeaderOptions } from "./view-template-report/ReportHeaderOptions"
+import { ReportHeaderOptions } from "./reports-component/ReportHeaderOptions"
 import { ReportDetails } from "./view-template-report/ReportDetails"
 
 

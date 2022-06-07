@@ -1,20 +1,9 @@
 import { FC } from "react";
+import { ViewTemplateReportProps } from '../../interfaces/props/ViewTemplateReportProps';
 import { ReportStatus } from "../../constants/enum";
 import { REPORT_STATUS_PUBLISHED, REPORT_STATUS_SAVED, REPORT_STATUS_SENT_FOR_APPROVAL } from "../../constants/tms";
 import { Anchor } from "../custom-web-controls/Anchor";
 import { Button } from "../custom-web-controls/Button";
-
-interface ReportTemplateGridItemProps {
-    thumbnail? : string,
-    title: string,
-    description?: string,
-    status: number,
-    createdDate: Date
-    createdBy: string,
-    lastUpdatedDate: Date,
-    isPinned: boolean,
-    onPinClicked: () => void
-}
 
 const ItemStatus: FC<{status: number;}> = ({status}) => {
     
@@ -26,7 +15,7 @@ const ItemStatus: FC<{status: number;}> = ({status}) => {
             case ReportStatus.PUBLISHED:
                 return <span className="badge badge-danger mr-2">{REPORT_STATUS_PUBLISHED}</span>
                 break
-            case ReportStatus.SAVED:
+            case ReportStatus.SENT_FOR_APPROVAL:
                 return <span className="badge badge-warning mr-2">{REPORT_STATUS_SENT_FOR_APPROVAL}</span>
                 break
         }
@@ -36,9 +25,10 @@ const ItemStatus: FC<{status: number;}> = ({status}) => {
     )
 }
 
-export const ReportTemplateGridItem : FC<ReportTemplateGridItemProps> = (props: ReportTemplateGridItemProps) => {
+export const ReportDetails : FC<ViewTemplateReportProps> = (props: ViewTemplateReportProps) => {
 
-    const { thumbnail, title, status, createdBy, createdDate,lastUpdatedDate, description, isPinned, onPinClicked } = props;
+    // const { reportTemplateID, thumbnail, documentName, status, createdBy, createdDate,lastUpdatedDate, description, isPinned, onPinClicked } = props;
+    const { reportTemplateID, thumbnail, documentName, description, status, createdBy, isPinned, onPinClicked } = props;
 
     const handlePinClicked = () => {
         onPinClicked();
@@ -52,9 +42,9 @@ export const ReportTemplateGridItem : FC<ReportTemplateGridItemProps> = (props: 
                 <img src={thumbnail} className="forum-avatar" />
               </div>
               <span className="mx-2 float-right">
-                <Anchor href="#" class_name="text-primary text-decoration-none" icon={isPinned ? 'ti-pin-alt text-secondary' : 'ti-pin2'} />            
+                <Anchor href="#" class_name="text-primary text-decoration-none" icon={isPinned ? 'ti-pin2' : 'ti-pin-alt text-secondary'} />            
               </span>
-              <Anchor href="#" class_name="forum-item-title" value={title} />
+              <Anchor href="#" class_name="forum-item-title" value={documentName} />
               <div className="forum-sub-title mt-1">
                 <ItemStatus status={status}  />
                 
@@ -62,15 +52,15 @@ export const ReportTemplateGridItem : FC<ReportTemplateGridItemProps> = (props: 
                   <span className="mr-3">
                     <i className="fa fa-user-edit" /> <b>Created by:</b> {createdBy}
                   </span>
-                  <span className="mr-3">
+                  {/* <span className="mr-3">
                     <i className="far fa-calendar-plus" /> <b>Created:</b> {createdDate}
-                  </span>
-                  <span>
+                  </span> */}
+                  {/* <span>
                     <i className="far fa-calendar-check" /> <b>Updated:</b> {lastUpdatedDate}
-                  </span>
+                  </span> */}
                 </small>
                 <p className="m-0">
-                  {description}
+                  {/* {description} */}
                 </p>
               </div>
             </div>

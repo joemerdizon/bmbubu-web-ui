@@ -1,12 +1,24 @@
-import React from "react"
+import React, { useEffect, useState } from 'react';
+import { ViewTemplateReportProps } from '../../interfaces/props/ViewTemplateReportProps';
+import { ViewTemplateReportMockData } from '../../mockData/ViewTemplateReportMockData';
 import { Pagination } from "../../components/custom-web-controls/Pagination"
 import { TabButton } from "../../components/custom-web-controls/TabButton"
 import { ReportHeaderOptions } from "./reports-component/ReportHeaderOptions"
-import { ReportDetails } from "./view-template-report/ReportDetails"
+import { ReportDetails } from "../../components/report-templates/ReportDetails"
+import dayjs from 'dayjs';
+// import { ReportDetails } from "./view-template-report/ReportDetails"
 
 
 
 export const ViewTemplateReport = () => {
+  const [viewTemplateReport, setViewTemplateReport] = useState<ViewTemplateReportProps[]>([]);  
+// const dt = new Date('07/06/2022');
+// console.log(dayjs('2022-06-07'));
+
+  useEffect(() => {
+    setViewTemplateReport(ViewTemplateReportMockData);
+  },[viewTemplateReport]);
+  
   const pagination = ["view-report-template-1", "view-report-template-2", "view-report-template-3"];
   return (
     <div className="content-wrapper">
@@ -36,47 +48,23 @@ export const ViewTemplateReport = () => {
                 <div className="tab-pane fade show active scroll-wrapper" id="all-reports-section" role="tabpanel" aria-labelledby="all-reports-section">
                   <div className="wrapper wrapper-content animated fadeInRight">
                     <div className="ibox-content forum-container">
-                      <ReportHeaderOptions />
-                      <ReportDetails 
-                        report_thumbnail={"images/assigned-templates/report1.png"} 
-                        report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"} 
-                        report_status={"Saved"} 
-                        report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
-                        icon_pin={"ti-pin2"} 
-                        created_by={"John Doe"}
-                        created_at={"February 06, 2022"} 
-                        updated_at={"February 07, 2022"}
-                      />
-                      <ReportDetails 
-                        report_thumbnail={"images/assigned-templates/report2.png"} 
-                        report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"} 
-                        report_status={"Published"} 
-                        report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
-                        icon_pin={"ti-pin2"} 
-                        created_by={"John Doe"}
-                        created_at={"February 06, 2022"} 
-                        updated_at={"February 07, 2022"}
-                      />
-                      <ReportDetails 
-                        report_thumbnail={"images/assigned-templates/report3.png"} 
-                        report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"} 
-                        report_status={"Saved"} 
-                        report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
-                        icon_pin={"ti-pin-alt text-secondary"} 
-                        created_by={"John Doe"}
-                        created_at={"February 06, 2022"} 
-                        updated_at={"February 07, 2022"}
-                      />
-                      <ReportDetails 
-                        report_thumbnail={"images/assigned-templates/report4.png"} 
-                        report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"} 
-                        report_status={"Sent for Approval"} 
-                        report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
-                        icon_pin={"ti-pin-alt text-secondary"} 
-                        created_by={"John Doe"}
-                        created_at={"February 06, 2022"} 
-                        updated_at={"February 07, 2022"}
-                      />
+                      <ReportHeaderOptions />                      
+                      {
+                        viewTemplateReport.map( (item, index) => (                          
+                          <ReportDetails 
+                            reportTemplateID = {item.reportTemplateID}
+                            thumbnail = {item.thumbnail}
+                            documentName = {item.documentName}
+                            description = {item.description}
+                            status = {item.status}
+                            createdBy = {item.createdBy}
+                            // createdDate = {item.createdDate}
+                            // lastUpdatedDate = {item.lastUpdatedDate}
+                            isPinned = {item.isPinned}
+                            onPinClicked = {item.onPinClicked}
+                          />
+                        ))
+                      }                       
                     </div>
                     <Pagination href={pagination}/>
                   </div>
@@ -85,24 +73,23 @@ export const ViewTemplateReport = () => {
                   <div className="wrapper wrapper-content animated fadeInRight">
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />
-                      <ReportDetails 
-                        report_thumbnail={"images/assigned-templates/report1.png"} 
-                        report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}                         
-                        report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
-                        icon_pin={"ti-pin2"} 
-                        created_by={"John Doe"}
-                        created_at={"February 06, 2022"} 
-                        updated_at={"February 07, 2022"}
-                      />                      
-                      <ReportDetails 
-                        report_thumbnail={"images/assigned-templates/report3.png"} 
-                        report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}                         
-                        report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
-                        icon_pin={"ti-pin-alt text-secondary"} 
-                        created_by={"John Doe"}
-                        created_at={"February 06, 2022"} 
-                        updated_at={"February 07, 2022"}
-                      />                      
+                      {                        
+                        viewTemplateReport.map( (item, index) => (    
+                          item.status === 1 && 
+                          <ReportDetails 
+                            reportTemplateID = {item.reportTemplateID}
+                            thumbnail = {item.thumbnail}
+                            documentName = {item.documentName}
+                            description = {item.description}
+                            status = {item.status}
+                            createdBy = {item.createdBy}
+                            // createdDate = {item.createdDate}
+                            // lastUpdatedDate = {item.lastUpdatedDate}
+                            isPinned = {item.isPinned}
+                            onPinClicked = {item.onPinClicked}
+                          />
+                        ))                        
+                      }   
                     </div>
                     <Pagination href={pagination}/>
                   </div>
@@ -111,15 +98,23 @@ export const ViewTemplateReport = () => {
                   <div className="wrapper wrapper-content animated fadeInRight">
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />
-                      <ReportDetails 
-                        report_thumbnail={"images/assigned-templates/report2.png"} 
-                        report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}                         
-                        report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
-                        icon_pin={"ti-pin2"} 
-                        created_by={"John Doe"}
-                        created_at={"February 06, 2022"} 
-                        updated_at={"February 07, 2022"}
-                      />                     
+                      {                        
+                        viewTemplateReport.map( (item, index) => (    
+                          item.status === 2 && 
+                          <ReportDetails 
+                            reportTemplateID = {item.reportTemplateID}
+                            thumbnail = {item.thumbnail}
+                            documentName = {item.documentName}
+                            description = {item.description}
+                            status = {item.status}
+                            createdBy = {item.createdBy}
+                            // createdDate = {item.createdDate}
+                            // lastUpdatedDate = {item.lastUpdatedDate}
+                            isPinned = {item.isPinned}
+                            onPinClicked = {item.onPinClicked}
+                          />
+                        ))                        
+                      }   
                     </div>
                     <Pagination href={pagination}/>
                   </div>
@@ -128,15 +123,23 @@ export const ViewTemplateReport = () => {
                   <div className="wrapper wrapper-content animated fadeInRight">
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />                      
-                      <ReportDetails 
-                        report_thumbnail={"images/assigned-templates/report4.png"} 
-                        report_title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}                         
-                        report_description={"Ed tempus urna et pharetra pharetra. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Integer eget aliquet nibh praesent tristique magna sit amet. Purus in mollis nunc sed id semper risus in."}
-                        icon_pin={"ti-pin-alt text-secondary"} 
-                        created_by={"John Doe"}
-                        created_at={"February 06, 2022"} 
-                        updated_at={"February 07, 2022"}
-                      />
+                      {                        
+                        viewTemplateReport.map( (item, index) => (    
+                          item.status === 3 && 
+                          <ReportDetails 
+                            reportTemplateID = {item.reportTemplateID}
+                            thumbnail = {item.thumbnail}
+                            documentName = {item.documentName}
+                            description = {item.description}
+                            status = {item.status}
+                            createdBy = {item.createdBy}
+                            // createdDate = {item.createdDate}
+                            // lastUpdatedDate = {item.lastUpdatedDate}
+                            isPinned = {item.isPinned}
+                            onPinClicked = {item.onPinClicked}
+                          />
+                        ))                        
+                      }   
                     </div>
                     <Pagination href={pagination}/>
                   </div>

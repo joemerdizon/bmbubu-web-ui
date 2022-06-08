@@ -9,6 +9,7 @@ interface AnchorProps {
   modal       ? : {toggle?: string, target?: string},
   icon        ? : string,
   value       ? : string
+  onClick? : () => void
 }
 
 const defaultProps: AnchorProps = {
@@ -19,7 +20,8 @@ const defaultProps: AnchorProps = {
   tooltip     : {toggle: "", placement: "", title: ""},
   modal       : {toggle: "", target: ""},
   icon        : "",
-  value       : ""
+  value       : "",
+  onClick: () => {}
 }
 
 export const Anchor : React.FunctionComponent<AnchorProps> = (props:any) => { 
@@ -34,6 +36,7 @@ export const Anchor : React.FunctionComponent<AnchorProps> = (props:any) => {
       title                 = {props.tooltip.title}      
       data-toggle           = {props.modal.toggle} 
       data-target           = {props.modal.target}
+      onClick = {props.onClick}
     >
       <i className={props.icon} /> {props.value}      
     </a>

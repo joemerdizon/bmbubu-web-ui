@@ -5,21 +5,46 @@ import { Pagination } from "../../components/custom-web-controls/Pagination"
 import { TabButton } from "../../components/custom-web-controls/TabButton"
 import { ReportHeaderOptions } from "./reports-component/ReportHeaderOptions"
 import { ReportDetails } from "../../components/report-templates/ReportDetails"
-import dayjs from 'dayjs';
-// import { ReportDetails } from "./view-template-report/ReportDetails"
-
-
+import { ReportsMockData } from '../../mockData/ReportsMockDate';
+import { ThumbnailMockData } from '../../mockData/ThumbnailMockData';
 
 export const ViewTemplateReport = () => {
-  const [viewTemplateReport, setViewTemplateReport] = useState<ViewTemplateReportProps[]>([]);  
-// const dt = new Date('07/06/2022');
-// console.log(dayjs('2022-06-07'));
-
-  useEffect(() => {
-    setViewTemplateReport(ViewTemplateReportMockData);
-  },[viewTemplateReport]);
-  
+  let mappedData: ViewTemplateReportProps[];
   const pagination = ["view-report-template-1", "view-report-template-2", "view-report-template-3"];
+
+  const [reportTemplates, setReportTemplates] = useState<ViewTemplateReportProps[]>([]);
+
+  // Fetch from API
+  // Might need to convert this in a custom hooks
+  useEffect(() => {
+    mappedData = ReportsMockData.map(report => {
+      return {
+        ...report,
+        thumbnail: ThumbnailMockData[Math.floor(Math.random() * 3)],
+        isPinned: false,
+      }
+    });
+  }, []);
+    
+  useEffect(() => {    
+    mappedData && setReportTemplates(mappedData);
+  },[reportTemplates]);
+  
+  const handlePinClick = (id: number) => {
+    const newReportTemplates = reportTemplates.map((reportTemplate) => {
+      if(reportTemplate.reportTemplateId === id) {
+        const updatedReportTemplate = {...reportTemplate, isPinned: !reportTemplate.isPinned}
+        console.log(updatedReportTemplate);
+        return updatedReportTemplate; 
+      };
+      return reportTemplate;
+    });
+
+    console.log(newReportTemplates)
+
+    setReportTemplates(newReportTemplates);
+  }
+
   return (
     <div className="content-wrapper">
       <div className="row">
@@ -50,18 +75,11 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />                      
                       {
-                        viewTemplateReport.map( (item, index) => (                          
+                        reportTemplates.map( (item, index) => (                          
                           <ReportDetails 
-                            reportTemplateID = {item.reportTemplateID}
-                            thumbnail = {item.thumbnail}
-                            documentName = {item.documentName}
-                            description = {item.description}
-                            status = {item.status}
-                            createdBy = {item.createdBy}
-                            // createdDate = {item.createdDate}
-                            // lastUpdatedDate = {item.lastUpdatedDate}
-                            isPinned = {item.isPinned}
-                            onPinClicked = {item.onPinClicked}
+                            key={index} 
+                            {...item}
+                            onPinClick = {() => handlePinClick(item.reportTemplateId)}
                           />
                         ))
                       }                       
@@ -74,19 +92,12 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />
                       {                        
-                        viewTemplateReport.map( (item, index) => (    
+                        reportTemplates.map( (item, index) => (    
                           item.status === 1 && 
-                          <ReportDetails 
-                            reportTemplateID = {item.reportTemplateID}
-                            thumbnail = {item.thumbnail}
-                            documentName = {item.documentName}
-                            description = {item.description}
-                            status = {item.status}
-                            createdBy = {item.createdBy}
-                            // createdDate = {item.createdDate}
-                            // lastUpdatedDate = {item.lastUpdatedDate}
-                            isPinned = {item.isPinned}
-                            onPinClicked = {item.onPinClicked}
+                          <ReportDetails
+                            key={index} 
+                            {...item}
+                            onPinClick = {() => handlePinClick(item.reportTemplateId)}
                           />
                         ))                        
                       }   
@@ -99,19 +110,12 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />
                       {                        
-                        viewTemplateReport.map( (item, index) => (    
+                        reportTemplates.map( (item, index) => (    
                           item.status === 2 && 
-                          <ReportDetails 
-                            reportTemplateID = {item.reportTemplateID}
-                            thumbnail = {item.thumbnail}
-                            documentName = {item.documentName}
-                            description = {item.description}
-                            status = {item.status}
-                            createdBy = {item.createdBy}
-                            // createdDate = {item.createdDate}
-                            // lastUpdatedDate = {item.lastUpdatedDate}
-                            isPinned = {item.isPinned}
-                            onPinClicked = {item.onPinClicked}
+                          <ReportDetails
+                            key={index} 
+                            {...item}
+                            onPinClick = {() => handlePinClick(item.reportTemplateId)}
                           />
                         ))                        
                       }   
@@ -124,19 +128,12 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />                      
                       {                        
-                        viewTemplateReport.map( (item, index) => (    
+                        reportTemplates.map( (item, index) => (    
                           item.status === 3 && 
                           <ReportDetails 
-                            reportTemplateID = {item.reportTemplateID}
-                            thumbnail = {item.thumbnail}
-                            documentName = {item.documentName}
-                            description = {item.description}
-                            status = {item.status}
-                            createdBy = {item.createdBy}
-                            // createdDate = {item.createdDate}
-                            // lastUpdatedDate = {item.lastUpdatedDate}
-                            isPinned = {item.isPinned}
-                            onPinClicked = {item.onPinClicked}
+                            key={index} 
+                            {...item}
+                            onPinClick = {() => handlePinClick(item.reportTemplateId)}
                           />
                         ))                        
                       }   

@@ -4,6 +4,7 @@ import { ReportStatus } from "../../constants/enum";
 import { REPORT_STATUS_PUBLISHED, REPORT_STATUS_SAVED, REPORT_STATUS_SENT_FOR_APPROVAL } from "../../constants/tms";
 import { Anchor } from "../custom-web-controls/Anchor";
 import { Button } from "../custom-web-controls/Button";
+import { convertToDateString } from "../../lib/common/helpers";
 
 const ItemStatus: FC<{status: number;}> = ({status}) => {
     
@@ -27,11 +28,10 @@ const ItemStatus: FC<{status: number;}> = ({status}) => {
 
 export const ReportDetails : FC<ViewTemplateReportProps> = (props: ViewTemplateReportProps) => {
 
-    // const { reportTemplateID, thumbnail, documentName, status, createdBy, createdDate,lastUpdatedDate, description, isPinned, onPinClicked } = props;
-    const { reportTemplateID, thumbnail, documentName, description, status, createdBy, isPinned, onPinClicked } = props;
+    const { reportTemplateId, thumbnail, documentName, description, status, createdBy, isPinned, onPinClick, createdDate, lastUpdatedDate } = props;
 
-    const handlePinClicked = () => {
-        onPinClicked();
+    const handlePinClick = () => {
+      onPinClick && onPinClick();
     }
 
     return (
@@ -42,7 +42,7 @@ export const ReportDetails : FC<ViewTemplateReportProps> = (props: ViewTemplateR
                 <img src={thumbnail} className="forum-avatar" />
               </div>
               <span className="mx-2 float-right">
-                <Anchor href="#" class_name="text-primary text-decoration-none" icon={isPinned ? 'ti-pin2' : 'ti-pin-alt text-secondary'} />            
+                <Anchor onClick={handlePinClick} class_name="text-primary text-decoration-none" icon={isPinned ? 'ti-pin2' : 'ti-pin-alt text-secondary'} />            
               </span>
               <Anchor href="#" class_name="forum-item-title" value={documentName} />
               <div className="forum-sub-title mt-1">
@@ -52,12 +52,12 @@ export const ReportDetails : FC<ViewTemplateReportProps> = (props: ViewTemplateR
                   <span className="mr-3">
                     <i className="fa fa-user-edit" /> <b>Created by:</b> {createdBy}
                   </span>
-                  {/* <span className="mr-3">
-                    <i className="far fa-calendar-plus" /> <b>Created:</b> {createdDate}
-                  </span> */}
-                  {/* <span>
-                    <i className="far fa-calendar-check" /> <b>Updated:</b> {lastUpdatedDate}
-                  </span> */}
+                  {<span className="mr-3">
+                    <i className="far fa-calendar-plus" /> <b>Created:</b> {convertToDateString(createdDate)}
+                  </span>}
+                  {<span>
+                    <i className="far fa-calendar-check" /> <b>Updated:</b> {convertToDateString(lastUpdatedDate)}
+                  </span>}
                 </small>
                 <p className="m-0">
                   {/* {description} */}

@@ -1,49 +1,40 @@
-import { ViewTemplateReportProps } from "../interfaces/props/ViewTemplateReportProps";
+import { ReportDto } from "../lib/dto/assignReport.dto";
 
-export const ViewTemplateReportMockData: ViewTemplateReportProps[] = [
+export const AssignReportMockData: ReportDto[] = [
     {      
       reportTemplateId: 1,
-      thumbnail : '',
       documentName: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      description: '',
       status: 1,
       createdBy: 'John Doe',
       createdDate: new Date(),  
       lastUpdatedDate: new Date(),
-      isPinned: true,
+      reportProgress: 25
     },
-    {      
-      reportTemplateId: 2,
-      thumbnail : '',
+    {   
+      reportTemplateId: 2,   
       documentName: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      description: '',
       status: 2,
       createdBy: 'John Doe',
       createdDate: new Date(),  
       lastUpdatedDate: new Date(),
-      isPinned: true,
+      reportProgress: 100
     },
     {      
       reportTemplateId: 3,
-      thumbnail : '',
       documentName: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      description: '',
-      status: 1,
-      createdBy: 'John Doe',
-      createdDate: new Date(),  
-      lastUpdatedDate: new Date(),
-      isPinned: false,
-    },
-    {      
-      reportTemplateId: 4,
-      thumbnail : '',
-      documentName: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      description: '',
       status: 3,
       createdBy: 'John Doe',
       createdDate: new Date(),  
       lastUpdatedDate: new Date(),
-      isPinned: false,
-    }
-    
+      reportProgress: 50
+    },
+    {      
+      reportTemplateId: 4,
+      documentName: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      status: 4,
+      createdBy: 'John Doe',
+      createdDate: new Date(),  
+      lastUpdatedDate: new Date(),
+      reportProgress: 75
+    }  
 ]

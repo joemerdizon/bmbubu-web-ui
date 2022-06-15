@@ -1,6 +1,6 @@
 import { ReportStatus } from "../../constants/enum"
 
-export type ReportDto = {
+export type ReportTemplateDto = {
     reportTemplateId: number,
     documentName: string,
     status: ReportStatus,

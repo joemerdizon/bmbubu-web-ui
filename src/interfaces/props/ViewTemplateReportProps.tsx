@@ -5,7 +5,7 @@ export interface ViewTemplateReportProps {
   description?: string,
   status: number,
   createdBy: string,
-  createdDate: Date  
+  createdDate: Date,
   lastUpdatedDate: Date,
   isPinned: boolean,
   onPinClick?: () => void

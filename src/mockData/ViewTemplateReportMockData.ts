@@ -1,6 +1,6 @@
-import { ReportDto } from "../lib/dto/viewTemplateReport.dto";
+import { ReportTemplateDto } from "../lib/dto/report.template.dto";
 
-export const ViewTemplateReportMockData: ReportDto[] = [
+export const ReportsMockData: ReportTemplateDto[] = [
     {      
       reportTemplateId: 1,
       documentName: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',

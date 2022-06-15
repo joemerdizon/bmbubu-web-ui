@@ -1,46 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import { ViewTemplateReportProps } from '../../interfaces/props/ViewTemplateReportProps';
+import { ViewTemplateReportMockData } from '../../mockData/ViewTemplateReportMockData';
 import { Pagination } from "../../components/custom-web-controls/Pagination"
 import { TabButton } from "../../components/custom-web-controls/TabButton"
 import { ReportHeaderOptions } from "./reports-component/ReportHeaderOptions"
-import { ViewTemplateReportDetails } from "../../components/report-templates/ViewTemplateReportDetails"
-import { ViewTemplateReportMockData } from '../../mockData/ViewTemplateReportMockData';
+import { ReportDetails } from "../../components/report-templates/ReportDetails"
+import { ReportsMockData } from '../../mockData/ReportsMockDate';
 import { ThumbnailMockData } from '../../mockData/ThumbnailMockData';
+import { useFetch } from '../../lib/hooks/useFetch';
+import { map } from 'lodash';
+import { ReportTemplateDto } from '../../lib/dto/report.template.dto';
+import { REPORT_TEMPLATE_API_GET_ALL } from '../../constants/tms';
 
 export const ViewTemplateReport = () => {
-  let mappedData: ViewTemplateReportProps[];
   const pagination = ["view-report-template-1", "view-report-template-2", "view-report-template-3"];
 
-  const [reportTemplates, setReportTemplates] = useState<ViewTemplateReportProps[]>([]);
+  const [reportTemplates, setReportTemplates] = useState<ViewTemplateReportProps[] | undefined>([]);
+  const { response, fetchErrors, loaded }  = useFetch<ReportTemplateDto[]>(REPORT_TEMPLATE_API_GET_ALL);
 
-  // Fetch from API
-  // Might need to convert this in a custom hooks
-  useEffect(() => {
-    mappedData = ViewTemplateReportMockData.map(report => {
-      return {
-        ...report,
-        thumbnail: ThumbnailMockData[Math.floor(Math.random() * 3)],
-        isPinned: false,
-      }
-    });
-  }, []);
-    
-  useEffect(() => {    
-    mappedData && setReportTemplates(mappedData);
-  },[reportTemplates]);
-  
+  const mappedData: ViewTemplateReportProps[] = map(response, (d) => {
+    return {
+      ...d,
+      createdDate: new Date(d.createdDate),
+      lastUpdatedDate: new Date(d.lastUpdatedDate),
+      thumbnail: ThumbnailMockData[Math.floor(Math.random() * 3)],
+      isPinned: false,
+    }
+  }); 
+
+  useEffect(() => {  
+    loaded && setReportTemplates(mappedData);
+  },[response, loaded]);
+
   const handlePinClick = (id: number) => {
-    const newReportTemplates = reportTemplates.map((reportTemplate) => {
+    const newReportTemplates = map(reportTemplates, (reportTemplate) => {
       if(reportTemplate.reportTemplateId === id) {
         const updatedReportTemplate = {...reportTemplate, isPinned: !reportTemplate.isPinned}
         console.log(updatedReportTemplate);
         return updatedReportTemplate; 
       };
       return reportTemplate;
-    });
-
-    console.log(newReportTemplates)
-
+    })
+    
     setReportTemplates(newReportTemplates);
   }
 
@@ -74,8 +75,8 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />                      
                       {
-                        reportTemplates.map( (item, index) => (                          
-                          <ViewTemplateReportDetails 
+                        map(reportTemplates, (item, index) => (                          
+                          <ReportDetails 
                             key={index} 
                             {...item}
                             onPinClick = {() => handlePinClick(item.reportTemplateId)}
@@ -91,9 +92,9 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />
                       {                        
-                        reportTemplates.map( (item, index) => (    
+                        map(reportTemplates, (item, index) => (    
                           item.status === 1 && 
-                          <ViewTemplateReportDetails
+                          <ReportDetails
                             key={index} 
                             {...item}
                             onPinClick = {() => handlePinClick(item.reportTemplateId)}
@@ -109,9 +110,9 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />
                       {                        
-                        reportTemplates.map( (item, index) => (    
+                        map(reportTemplates, (item, index) => (    
                           item.status === 2 && 
-                          <ViewTemplateReportDetails
+                          <ReportDetails
                             key={index} 
                             {...item}
                             onPinClick = {() => handlePinClick(item.reportTemplateId)}
@@ -127,9 +128,9 @@ export const ViewTemplateReport = () => {
                     <div className="ibox-content forum-container">
                       <ReportHeaderOptions />                      
                       {                        
-                        reportTemplates.map( (item, index) => (    
+                        map(reportTemplates, (item, index) => (    
                           item.status === 3 && 
-                          <ViewTemplateReportDetails 
+                          <ReportDetails 
                             key={index} 
                             {...item}
                             onPinClick = {() => handlePinClick(item.reportTemplateId)}

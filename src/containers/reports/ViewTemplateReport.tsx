@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { ViewTemplateReportProps } from '../../interfaces/props/ViewTemplateReportProps';
-import { ViewTemplateReportMockData } from '../../mockData/ViewTemplateReportMockData';
 import { Pagination } from "../../components/custom-web-controls/Pagination"
 import { TabButton } from "../../components/custom-web-controls/TabButton"
 import { ReportHeaderOptions } from "./reports-component/ReportHeaderOptions"
-import { ReportDetails } from "../../components/report-templates/ReportDetails"
-import { ReportsMockData } from '../../mockData/ReportsMockDate';
 import { ThumbnailMockData } from '../../mockData/ThumbnailMockData';
 import { useFetch } from '../../lib/hooks/useFetch';
 import { map } from 'lodash';
 import { ReportTemplateDto } from '../../lib/dto/report.template.dto';
 import { REPORT_TEMPLATE_API_GET_ALL } from '../../constants/tms';
+import { ViewTemplateReportDetails } from '../../components/report-templates/ViewTemplateReportDetails';
 
 export const ViewTemplateReport = () => {
   const pagination = ["view-report-template-1", "view-report-template-2", "view-report-template-3"];
@@ -76,7 +74,7 @@ export const ViewTemplateReport = () => {
                       <ReportHeaderOptions />                      
                       {
                         map(reportTemplates, (item, index) => (                          
-                          <ReportDetails 
+                          <ViewTemplateReportDetails 
                             key={index} 
                             {...item}
                             onPinClick = {() => handlePinClick(item.reportTemplateId)}
@@ -94,7 +92,7 @@ export const ViewTemplateReport = () => {
                       {                        
                         map(reportTemplates, (item, index) => (    
                           item.status === 1 && 
-                          <ReportDetails
+                          <ViewTemplateReportDetails
                             key={index} 
                             {...item}
                             onPinClick = {() => handlePinClick(item.reportTemplateId)}
@@ -112,7 +110,7 @@ export const ViewTemplateReport = () => {
                       {                        
                         map(reportTemplates, (item, index) => (    
                           item.status === 2 && 
-                          <ReportDetails
+                          <ViewTemplateReportDetails
                             key={index} 
                             {...item}
                             onPinClick = {() => handlePinClick(item.reportTemplateId)}
@@ -130,7 +128,7 @@ export const ViewTemplateReport = () => {
                       {                        
                         map(reportTemplates, (item, index) => (    
                           item.status === 3 && 
-                          <ReportDetails 
+                          <ViewTemplateReportDetails 
                             key={index} 
                             {...item}
                             onPinClick = {() => handlePinClick(item.reportTemplateId)}

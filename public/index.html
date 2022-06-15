@@ -73,10 +73,14 @@
     <script src="js/custom/dashboard-chart.js"></script>
     <script src="js/custom/calendar-config.js"></script>
 
-    <script>
-      $(function () {
-        $('[data-tooltip-toggle="tooltip"]').tooltip()
-      })
+    <script>    
+      $(document).ready(function() {
+        $(function () {
+          $('[data-tooltip-toggle="tooltip"]').tooltip()
+        })
+
+        $('.data-table').DataTable();        
+      });
     </script>
   </body>
 </html>

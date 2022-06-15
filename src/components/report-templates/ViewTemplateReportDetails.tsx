@@ -26,9 +26,9 @@ const ItemStatus: FC<{status: number;}> = ({status}) => {
     )
 }
 
-export const ReportDetails : FC<ViewTemplateReportProps> = (props: ViewTemplateReportProps) => {
+export const ViewTemplateReportDetails : FC<ViewTemplateReportProps> = (props: ViewTemplateReportProps) => {
 
-    const { reportTemplateId, thumbnail, documentName, description, status, createdBy, isPinned, onPinClick, createdDate, lastUpdatedDate } = props;
+    const { reportTemplateId, thumbnail, documentName, description, status, createdBy, createdDate, lastUpdatedDate, isPinned, onPinClick } = props;
 
     const handlePinClick = () => {
       onPinClick && onPinClick();

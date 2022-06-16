@@ -10,3 +10,9 @@ export enum AssignReportStatus {
     INACTIVE = 3,
     PENDING = 4
 }
+
+export enum LightIndicatorStatus {
+    PENDING = 1,
+    ACTIVE = 2, 
+    COMPLETED = 3
+}

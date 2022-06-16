@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Anchor } from "../custom-web-controls/Anchor";
 import { Button } from "../custom-web-controls/Button";
+import { StatusLightIndicator } from "../custom-web-controls/StatusLightIndicator";
 import { convertToDateString } from "../../lib/common/helpers";
 
 export const GenerateReportDetails = () => {    
@@ -160,10 +161,7 @@ export const GenerateReportDetails = () => {
                           </td>
                           <td>February 10, 2022</td>
                           <td className="my-auto">
-                            <svg height={13} width={10} className="mr-1">
-                              <circle cx={5} cy={5} r={5} fill="#ba3742" />
-                            </svg>
-                            Pending
+                            <StatusLightIndicator status={1} />                            
                           </td>
                           <td>                            
                             <Anchor href={"javascript:void(0);"} icon={"fa-solid fa-arrow-up-right-from-square"} tooltip={{toggle: "tooltip", placement: "bottom", title: "Open Description and/or Other Documents"}} modal={{toggle: "modal", target: "#modal-fullscreen-xl-generate-report-action"}} />                            

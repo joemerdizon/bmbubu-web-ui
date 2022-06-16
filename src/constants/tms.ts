@@ -6,3 +6,6 @@ export const REPORT_STATUS_ARCHIVE : string = "Archive";
 export const REPORT_STATUS_ACTIVE : string = "Active";
 export const REPORT_STATUS_INACTIVE : string = "Inactive";
 export const REPORT_STATUS_PENDING : string = "Pending";
+export const LIGHT_INDICATOR_STATUS_PENDING : string = "Pending";
+export const LIGHT_INDICATOR_STATUS_ACTIVE : string = "Active";
+export const LIGHT_INDICATOR_STATUS_COMPLETED : string = "Completed";

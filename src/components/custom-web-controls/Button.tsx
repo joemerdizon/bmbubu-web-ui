@@ -25,7 +25,7 @@ const defaultProps: ButtonProps = {
 export const Button : React.FunctionComponent<ButtonProps> = (props:any) => { 
   return (
     <button 
-      type                  = {props.href} 
+      type                  = {props.type} 
       id                    = {props.id}
       className             = {props.class_name} 
       style                 = {props.style}

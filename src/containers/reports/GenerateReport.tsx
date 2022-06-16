@@ -51,7 +51,7 @@ export const GenerateReport = () => {
                   </label>
                 </div>
                 <hr />  
-                <DataTable headers={archiveReportsTableHeader} data={archiveReportsData}/>
+                <DataTable headers={archiveReportsTableHeader} data={archiveReportsData}/>              
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ export const GenerateReportArchiveReportMockData: ReportDto[] = [
     generation: "Sample", 
     actions: "Archive"
   },
-  {      
+  {
     reportTemplateId: 2,
     documentName: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',      
     generatedBy: 'John Doe',

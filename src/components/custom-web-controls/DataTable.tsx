@@ -36,7 +36,7 @@ export const DataTable : React.FunctionComponent<DataTableProps> = (props) => {
                   
   
   return (
-    <table id="data-table-generate-report" className="table table-striped table-bordered w-100 data-table">
+    <table className="table table-striped table-bordered w-100 data-table">
       <thead>
         <tr>
         {

@@ -1,20 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { DataTable } from "../../components/custom-web-controls/DataTable";
 import { GenerateReportDetails } from '../../components/report-templates/GenerateReportDetails';
+import { GenerateReportProps } from '../../interfaces/props/GenerateReportProps';
+import { GenerateReportMockData } from '../../mockData/GenerateReportMockData';
 import { GenerateReportArchiveReportProps } from '../../interfaces/props/GenerateReportArchiveReportProps';
 import { GenerateReportArchiveReportMockData } from '../../mockData/GenerateReportArchiveReportMockData';
+import { map } from 'lodash';
+
 
 
 
 
 export const GenerateReport = () => {
-  let mappedData: GenerateReportArchiveReportProps[];  
+  let mappedGenerateReportDetailsData: GenerateReportProps[];  
+  let mappedGenerateReportArchiveReportData: GenerateReportArchiveReportProps[];  
+
+  const [generateReportsData, setGenerateReportsData] = useState<GenerateReportProps[]>([]);
   const [archiveReportsData, setArchiveReportsData] = useState<GenerateReportArchiveReportProps[]>([]);
 
   // Fetch from API
   // Might need to convert this in a custom hooks
   useEffect(() => {
-    mappedData = GenerateReportArchiveReportMockData.map(report => {
+    mappedGenerateReportDetailsData = GenerateReportMockData.map(report => {
+      return {
+        ...report        
+      }
+    });
+
+    mappedGenerateReportArchiveReportData = GenerateReportArchiveReportMockData.map(report => {
       return {
         ...report        
       }
@@ -22,8 +35,9 @@ export const GenerateReport = () => {
   }, []);
     
   useEffect(() => {    
-    mappedData && setArchiveReportsData(mappedData);
-  },[archiveReportsData]);
+    mappedGenerateReportDetailsData && setGenerateReportsData(mappedGenerateReportDetailsData);
+    mappedGenerateReportArchiveReportData && setArchiveReportsData(mappedGenerateReportArchiveReportData);
+  },[generateReportsData, archiveReportsData]);
 
   const archiveReportsTableHeader = [
     { heading : 'Document Name', value : 'documentName' }, 
@@ -35,11 +49,18 @@ export const GenerateReport = () => {
     { heading: 'Actions', value : 'actions'} 
   ];
   
+  // console.log(archiveReportsData);  
+
   return (
     <>      
       <div className="content-wrapper">
         <div className="row">
-          <GenerateReportDetails />
+          {
+            map(generateReportsData, (item, index) => (
+              <GenerateReportDetails key={index} {...item} />
+            ))
+          }
+          
           <div className="col-md-12 grid-margin stretch-card">
             <div className="card">
               <div className="card-body">

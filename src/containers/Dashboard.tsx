@@ -1,6 +1,51 @@
-import React from "react"
+import React, { useEffect, useState } from 'react';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+import { DashboardChartProps } from '../interfaces/props/DashboardChartProps';
+import { DashboardChartMockData } from '../mockData/DashboardChartMockData';
+// import _ from 'lodash';
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+const data = {
+  labels: ["Completed", "New", "Urgent", "Overdue"],
+  datasets: [
+    {
+      // label: '# of Votes',
+      data: [39.7, 24.1, 6.9, 29.3],
+      backgroundColor: [
+        "#529f50", "#4793c8", "#fc8a34","#ba3742"
+      ],
+      borderColor: 
+        'rgba(255, 255, 255, 1)'        
+      ,
+      borderWidth: 1,
+    },
+  ],
+};
 
 export const Dashboard = () => {
+  let mappedChartData: DashboardChartProps[];
+  const [dashboardChartData, setDashboardChartData] = useState<DashboardChartProps[]>([]);
+
+  // Fetch from API
+  // Might need to convert this in a custom hooks
+  useEffect(() => {       
+    // mappedChartData = {...DashboardChartMockData}; 
+    mappedChartData = DashboardChartMockData.map(data => {
+      return {
+        ...data        
+      }
+    });
+  }, []);
+    
+  useEffect(() => {    
+    mappedChartData && setDashboardChartData(mappedChartData);
+  },[dashboardChartData]);
+
+  // console.log(data);  
+  // console.log(dashboardChartData[0]);
+
   return (
     <div className="content-wrapper">
       <div className="row">
@@ -21,17 +66,32 @@ export const Dashboard = () => {
             <div className="col-lg-8 col-md-8 col-12 mb-5">
               <div className="card">
                 <div className="card-body">
-                  <h4 className="card-title">Tasks</h4>
+                  <h4 className="card-title">
+                    <i className="fa-solid fa-tasks"></i> Tasks
+                  </h4>
                   <div className="my-3">
                     <hr />
                   </div>
-                  <div id="sales-legend" className="chartjs-legend mt-4 mb-2" />
-                  <canvas id="dashboardChart" />
+                  <div className="row justify-content-center">
+                    <div className="w-50">      
+                      {/* {
+                        dashboardChartData.map( (item, index) => (    
+                          <Pie data={...item} />
+                        ))
+                      }                     */}
+                      {/* <Pie data={dashboardChartData[0]} /> */}
+                      {/* <Pie data={data} /> */}
+                      {dashboardChartData[0] !== undefined && <Pie data={dashboardChartData[0]} />}
+                      {/* {_.isEmpty(dashboardChartData) && <Pie data={dashboardChartData[0]} />} */}                      
+                    </div>                  
+                  </div>                                    
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-4 col-12 mt-4 mb-4">
-              <h4 className="card-title">Quick Links</h4>
+              <h4 className="card-title">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i> Quick Links
+              </h4>
               <div className="my-3">
                 <hr />
               </div>
@@ -47,7 +107,7 @@ export const Dashboard = () => {
                             </h3>
                             <small className="text-uppercase smallest">Task</small>
                           </div>
-                          <a href="javascript:void();" className="small text-decoration-none">
+                          <a href="#" className="small text-decoration-none">
                             more details
                             <i className="fa-solid fa-circle-chevron-right btn-icon-append ml-3" />
                           </a>
@@ -68,7 +128,7 @@ export const Dashboard = () => {
                             </h3>
                             <small className="text-uppercase smallest">Report Templates</small>
                           </div>
-                          <a href="javascript:void();" className="small text-decoration-none">
+                          <a href="#" className="small text-decoration-none">
                             more details
                             <i className="fa-solid fa-circle-chevron-right btn-icon-append ml-3" />
                           </a>
@@ -88,7 +148,7 @@ export const Dashboard = () => {
                             </h3>
                             <small className="text-uppercase smallest">Tickets</small>
                           </div>
-                          <a href="javascript:void();" className="small text-decoration-none">
+                          <a href="#" className="small text-decoration-none">
                             more details
                             <i className="fa-solid fa-circle-chevron-right btn-icon-append ml-3" />
                           </a>
@@ -108,7 +168,7 @@ export const Dashboard = () => {
                             </h3>
                             <small className="text-uppercase smallest">Approval</small>
                           </div>
-                          <a href="javascript:void();" className="small text-decoration-none">
+                          <a href="#" className="small text-decoration-none">
                             more details
                             <i className="fa-solid fa-circle-chevron-right btn-icon-append ml-3" />
                           </a>
@@ -128,7 +188,7 @@ export const Dashboard = () => {
                             </h3>
                             <small className="text-uppercase smallest">Comments</small>
                           </div>
-                          <a href="javascript:void();" className="small text-decoration-none">
+                          <a href="#" className="small text-decoration-none">
                             more details
                             <i className="fa-solid fa-circle-chevron-right btn-icon-append ml-3" />
                           </a>
@@ -148,7 +208,7 @@ export const Dashboard = () => {
                             </h3>
                             <small className="text-uppercase smallest">Market Place</small>
                           </div>
-                          <a href="javascript:void();" className="small text-decoration-none">
+                          <a href="#" className="small text-decoration-none">
                             more details
                             <i className="fa-solid fa-circle-chevron-right btn-icon-append ml-3" />
                           </a>
@@ -164,11 +224,13 @@ export const Dashboard = () => {
         <div className="col-lg-12 grid-margin grid-margin-lg-0 stretch-card">
           <div className="card">
             <div className="card-body">
-              <h4 className="card-title">Schedule</h4>
+              <h4 className="card-title">
+                <i className="fa-solid fa-calendar-days"></i> Schedule
+              </h4>
               <div className="my-3">
                 <hr />
               </div>
-              <div id="calendar" />
+              {/* <div id="calendar" /> */}
             </div>
           </div>
         </div>
@@ -199,19 +261,19 @@ export const Dashboard = () => {
               <small>Show / Hide Widgets</small>          
               <div className="form-check">
                 <label className="form-check-label">
-                  <input type="checkbox" className="form-check-input" checked />
+                  <input type="checkbox" className="form-check-input"/>
                   Calendar
                 <i className="input-helper"></i></label>
               </div>
               <div className="form-check">
                 <label className="form-check-label">
-                  <input type="checkbox" className="form-check-input" checked />
+                  <input type="checkbox" className="form-check-input"/>
                   Chart
                 <i className="input-helper"></i></label>
               </div>
               <div className="form-check">
                 <label className="form-check-label">
-                  <input type="checkbox" className="form-check-input" checked />
+                  <input type="checkbox" className="form-check-input"/>
                   Quick Links
                 <i className="input-helper"></i></label>
               </div>

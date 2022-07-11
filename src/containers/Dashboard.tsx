@@ -3,6 +3,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { DashboardChartProps } from '../interfaces/props/DashboardChartProps';
 import { DashboardChartMockData } from '../mockData/DashboardChartMockData';
+import { CalendarComponent } from '../components/sub-components/CalendarComponent';
 // import _ from 'lodash';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -73,16 +74,8 @@ export const Dashboard = () => {
                     <hr />
                   </div>
                   <div className="row justify-content-center">
-                    <div className="w-50">      
-                      {/* {
-                        dashboardChartData.map( (item, index) => (    
-                          <Pie data={...item} />
-                        ))
-                      }                     */}
-                      {/* <Pie data={dashboardChartData[0]} /> */}
-                      {/* <Pie data={data} /> */}
-                      {dashboardChartData[0] !== undefined && <Pie data={dashboardChartData[0]} />}
-                      {/* {_.isEmpty(dashboardChartData) && <Pie data={dashboardChartData[0]} />} */}                      
+                    <div className="w-50">                            
+                      {dashboardChartData[0] !== undefined && <Pie data={dashboardChartData[0]} />}                      
                     </div>                  
                   </div>                                    
                 </div>
@@ -230,7 +223,7 @@ export const Dashboard = () => {
               <div className="my-3">
                 <hr />
               </div>
-              {/* <div id="calendar" /> */}
+              <CalendarComponent />
             </div>
           </div>
         </div>

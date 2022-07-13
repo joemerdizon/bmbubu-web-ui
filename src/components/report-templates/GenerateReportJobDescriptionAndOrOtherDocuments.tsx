@@ -128,10 +128,10 @@ export const GenerateReportActionItems: FC<any> = (props) => {
                       <td>{convertToDateString(data.dueDate)}</td>
                       <td>{data.status}</td>
                       <td>
-                        <a href="javascript:void(0);" className="text-decoration-none mx-1">
+                        <a href="#" className="text-decoration-none mx-1">
                           <div className="badge badge-pill badge-danger"><i className="fa-solid fa-paperclip"></i> {data.action.attachment}</div>
                         </a>
-                        <a href="javascript:void(0);" className="text-decoration-none mx-1">
+                        <a href="#" className="text-decoration-none mx-1">
                           <div className="badge badge-pill badge-warning"><i className="fa-solid fa-comments"></i> {data.action.comments}</div>
                         </a>                        
                       </td>
@@ -209,7 +209,7 @@ export const GenerateReportCommentsAndNotes: FC<ReportCommentsAndNotesProps> = (
               <div className="w-100 mt-3">
                 <span className="font-weight-bold mr-2">Notify by email: </span>
                 <span>
-                  {(notifyByEmail ? <input type="checkbox" id="owner" className="form-check-input" checked /> : <input type="checkbox" id="owner" className="form-check-input" /> )}                  
+                  {(notifyByEmail ? <input type="checkbox" id="owner" className="form-check-input" defaultChecked /> : <input type="checkbox" id="owner" className="form-check-input" /> )}                  
                   <label htmlFor="owner" className="ml-3">Owner</label>
                 </span>
                 <button type="button" className="btn btn-primary btn-icon-text btn-sm float-right">

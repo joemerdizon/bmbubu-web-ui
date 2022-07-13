@@ -22,7 +22,7 @@ const GenerateReportTaskActionDetails: FC<GenerateReportTaskActionItemProps> = (
         <td>{convertToDateString(dueDate)}</td>
         <td className="my-auto"><StatusLightIndicator status={status} /></td>
         <td>
-          {status == 1 && <Anchor href={"javascript:void(0);"} icon={"fa-solid fa-arrow-up-right-from-square"} tooltip={{toggle: "tooltip", placement: "bottom", title: "Open Description and/or Other Documents"}} modal={{toggle: "modal", target: action}} /> }
+          {status == 1 && <Anchor href={"#"} icon={"fa-solid fa-arrow-up-right-from-square"} tooltip={{toggle: "tooltip", placement: "bottom", title: "Open Description and/or Other Documents"}} modal={{toggle: "modal", target: action}} /> }
         </td>
       </tr>      
   )
@@ -46,12 +46,12 @@ export const GenerateReportTaskDetails : FC<GenerateReportTasDetailskProps> = (p
           <StatusLightIndicator status={status} />                            
         </td>
         <td>                            
-          {status == 1 && <Anchor href={"javascript:void(0);"} icon={"fa-solid fa-arrow-up-right-from-square"} tooltip={{toggle: "tooltip", placement: "bottom", title: "Open Description and/or Other Documents"}} modal={{toggle: "modal", target: action}} />}
+          {status == 1 && <Anchor href={"#"} icon={"fa-solid fa-arrow-up-right-from-square"} tooltip={{toggle: "tooltip", placement: "bottom", title: "Open Description and/or Other Documents"}} modal={{toggle: "modal", target: action}} />}
         </td>
       </tr>
       {
         map(actionItem, (item, index) => (
-          <GenerateReportTaskActionDetails {...item} />
+          <GenerateReportTaskActionDetails {...item} key={index}/>
         ))
       }
     </>  

@@ -146,8 +146,7 @@ export const GenerateReportDetails : FC<GenerateReportProps> = (props: GenerateR
       <div className="col-md-12 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <Button class_name={"btn btn-primary btn-sm btn-icon-text float-right"} icon={"fa-solid fa-circle-plus mr-1"} value={"Generate Report"} modal={{toggle: "modal", target: "#modal-fullscreen-xl-generate-report"}} />          
-            {/* <Anchor href={"javascript:void(0);"} icon={"fa-solid fa-arrow-up-right-from-square"} tooltip={{toggle: "tooltip", placement: "bottom", title: "Open Description and/or Other Documents"}} modal={{toggle: "modal", target: "#modal-fullscreen-xl-generate-report-action"}} /> */}
+            <Button class_name={"btn btn-primary btn-sm btn-icon-text float-right"} icon={"fa-solid fa-circle-plus mr-1"} value={"Generate Report"} modal={{toggle: "modal", target: "#modal-fullscreen-xl-generate-report"}} />            
             <p className="card-title">
               <i className="fa fa-desktop mr-2" />
               Generate Reports
@@ -161,8 +160,8 @@ export const GenerateReportDetails : FC<GenerateReportProps> = (props: GenerateR
                   Name of Report
                 </label>
                 <div className="col-sm-6">
-                  <select id="name_of_report" className="form-control" required>
-                    <option disabled selected />
+                  <select id="name_of_report" className="form-control" defaultValue={''} required >
+                    <option disabled value="" />
                     <option value="Sample Report Name 1">Sample Report Name 1</option>
                     <option value="Sample Report Name 2">Sample Report Name 2</option>
                     <option value="Sample Report Name 3">Sample Report Name 3</option>
@@ -175,8 +174,8 @@ export const GenerateReportDetails : FC<GenerateReportProps> = (props: GenerateR
                   Status
                 </label>
                 <div className="col-sm-6">
-                  <select id="status" className="form-control" required>
-                    <option disabled selected />
+                  <select id="status" className="form-control" defaultValue={''} required>
+                    <option disabled value="" />
                     <option value="Active">Active</option>
                     <option value="Inactive">Inactive</option>
                   </select>

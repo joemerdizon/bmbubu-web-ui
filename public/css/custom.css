@@ -544,7 +544,7 @@ body.modal-open {
   overflow: hidden; 
 }
 
-.myaccordion .fa {
+.myaccordion .myaccordion-fa {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3);
 }
@@ -722,4 +722,53 @@ label.star:before {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+}
+
+
+
+
+
+/*  
+    Star Rating Style
+  * Custom Star Rating Styling
+*/
+.creators-hub-input-text {
+  font-family:Arial, FontAwesome;
+  border: none;
+  width: 95%;
+  margin-bottom: 3px;  
+}
+
+.creators-hub-input-text ~ .creators-hub-input-text-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ced4da;
+}
+
+.creators-hub-input-text:focus ~ .creators-hub-input-text-border {
+  width: 100%;
+  transition: 0.75s;
+}
+
+.creators-hub-items-level1 {
+  padding-left: 0px;
+}
+
+.creators-hub-items-level2 {
+  padding-left: 20px;
+}
+
+.creators-hub-items-level3 {
+  padding-left: 40px;
+}
+
+.creators-hub-items-level4 {
+  padding-left: 60px;
+}
+
+.creators-hub-items-level5 {
+  padding-left: 80px;
 }
